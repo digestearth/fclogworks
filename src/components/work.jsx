@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 
 import deck from "../assets/homepage/deck.png";
 import kitchen from "../assets/homepage/kitchen.png";
+import house from "../assets/homepage/house.png";
 
 const Row = styled.div`
     display: flex;
@@ -14,6 +15,11 @@ const Row = styled.div`
     margin-top: 10px;
     width: 100%;
     /* background-color: orange; */
+
+    h2 {
+        all:unset;
+        font-size: 32pt
+    }
 `
 
 const Column = styled.div`
@@ -34,7 +40,8 @@ const Column = styled.div`
 ` 
 
 const DescriptionWrapper = styled.div`
-    margin-left: ${props => props.left == false ? "40px" : "0"};
+    margin-left: ${props => props.left == false ? "60px" : "0"};
+    width: 80%;
 
     h3 {
         all: unset;
@@ -56,7 +63,7 @@ function ImageColumn(props) {
 }
 
 function DescriptionColumn(props) {
-    const {setCarouselActive, title, description, link, left} = props;
+    const {setCarouselActive, title, description, left} = props;
     return (
         <Column>
             <DescriptionWrapper left={left}>
@@ -76,23 +83,29 @@ export function Work(props) {
                 <DescriptionColumn
                     setCarouselActive={setCarouselActive}
                     left={true}
-                    title="Decks and Patios"
-                    description="Recover and revive that once beautiful deck or patio! We can help you with all your deck and patio needs."
-                    link="https://www.google.com"
+                    title="Remodel, Addition, and Construction"
+                    description="A passion for building log houses from the ground up gave us a deep understanding of conventional house building techniques. We can help bring your ideas to life and make a home which is uniquely &#34;you&#34;!"
                 />
                 <ImageColumn img={deck} alt="placeholder"/>
             </Row>
-            <Row>
-                <ImageColumn img={kitchen} alt="placeholder"/>
+            <Row>      
+                <ImageColumn img={deck} alt="placeholder"/>
                 <DescriptionColumn
                     setCarouselActive={setCarouselActive}
                     left={false}
-                    title="Title"
-                    description="Description"
-                    link="https://www.google.com"
+                    title="Deck, Patio, and Railing"
+                    description="Recover and revive that once sturdy and dependable deck. If it's old and ragged, we can bring it back to life!"
                 />
+            </Row>
+            <Row>
+                <DescriptionColumn
+                    setCarouselActive={setCarouselActive}
+                    left={true}
+                    title="Kitchen and Bathroom"
+                    description="Bathroom or kitchen feeling old or dated? Invest in your house and build the home that fits you!"
+                />
+                <ImageColumn img={kitchen} alt="placeholder"/>      
             </Row>  
         </>
-    
     )
 }
