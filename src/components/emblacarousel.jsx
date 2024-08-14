@@ -65,7 +65,7 @@ export function EmblaCarousel(props) {
     }, [emblaApi])
   
     return (
-        <CarouselContainer>
+        <CarouselContainer onClick={() => setCarouselActive(false)}>
             <button onClick={() => setCarouselActive(false)}>X</button>
             <div className="embla" ref={emblaRef}>
                 <div className="embla__container">

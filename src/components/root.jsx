@@ -35,7 +35,7 @@ export function Root(props) {
     const [carouselActive, setCarouselActive] = useState(false);
     return (
         <>
-            <EmblaCarousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/> 
+            {carouselActive ? <EmblaCarousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/> : null}
             <NavBar />
             <MainDiv>
                 <Container>
