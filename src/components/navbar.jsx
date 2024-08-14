@@ -16,10 +16,11 @@ const NavContainer = styled.div`
         display: flex;
         align-items: center;
         min-width: 1500px;
+        max-width: 100%;
 
         /* background-color: green; */
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1500px) {
             min-width: 100%
         }
     }

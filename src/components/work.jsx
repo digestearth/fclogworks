@@ -46,10 +46,44 @@ const DescriptionWrapper = styled.div`
     h3 {
         all: unset;
         font-size: 32pt;
+        @media (max-width: 1000px) {
+            font-size: 24pt;
+        }
     }
 
     p {
         font-size: 14pt;
+        @media (max-width: 1000px) {
+            font-size: 12pt;
+        }
+    }
+
+    @keyframes buttonhover{
+        from {background-color: #5c5c5c; color: white; border: white 2px solid;}
+        to {background-color: white; color: black; border: none;}
+    }
+
+    button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        width: 200px;
+        height: 75px;
+        
+        border: white 2px solid;
+    }
+
+    button:hover {
+        animation-name: buttonhover;
+        animation-duration: 250ms;
+        background-color: white;
+        color: black;
+        border: none;
+
     }
 `
 

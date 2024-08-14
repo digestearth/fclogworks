@@ -18,7 +18,7 @@ const Container = styled.div`
     height: 100%;
     width: 1500px;
     margin-bottom: 10px;
-    @media (max-width: 850px) {
+    @media (max-width: 1500px) {
         width: 100%
     }
     /* background-color: red; */
@@ -26,6 +26,7 @@ const Container = styled.div`
 
 const Content = styled.div`
     height: 100%;
+    width: 100%;
     margin-left: 10px;
     margin-right: 10px;
 `

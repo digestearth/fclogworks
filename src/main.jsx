@@ -15,6 +15,7 @@ const globalStyle = css`
     margin: 0;
     background-color: #5c5c5c;
     color: white;
+    /* background-color: #eeede9; */
   }
 `
 
