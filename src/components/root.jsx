@@ -10,12 +10,12 @@ const MainDiv = styled.div`
 `
 
 const Container = styled.div`
-    width: 1000px;
+    width: 1500px;
     margin-bottom: 10px;
     @media (max-width: 850px) {
         width: 100%
     }
-    background-color: red;
+    /* background-color: red; */
 `
 
 const Content = styled.div`

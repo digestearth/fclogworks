@@ -15,7 +15,7 @@ const NavContainer = styled.div`
         height: 100%;
         display: flex;
         align-items: center;
-        min-width: 1000px;
+        min-width: 1500px;
 
         background-color: green;
 

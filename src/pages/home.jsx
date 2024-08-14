@@ -1,8 +1,10 @@
+import {Work} from "../components/work";
+
 export function HomePage() {
   return (
     <>
       <div>
-        abc
+        <Work />
       </div>
     </>
   )
