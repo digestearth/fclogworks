@@ -11,7 +11,7 @@ const globalStyle = css`
   html, body {
     height: 100%;
     width: 100%;
-    font-family: Arial, Helvitetica, sans-serif;
+    font-family: "Moderustic", Arial, sans-serif;
     margin: 0;
     background-color: #5c5c5c;
     color: white;
