@@ -4,12 +4,14 @@ import { NavBar } from "./navbar";
 import styled from "@emotion/styled";
 
 const MainDiv = styled.div`
+    height: 100%;
     display: flex;
     justify-content: center;
     min-height: 1000px;
 `
 
 const Container = styled.div`
+    height: 100%;
     width: 1500px;
     margin-bottom: 10px;
     @media (max-width: 850px) {
@@ -19,6 +21,7 @@ const Container = styled.div`
 `
 
 const Content = styled.div`
+    height: 100%;
     margin-left: 10px;
     margin-right: 10px;
 `

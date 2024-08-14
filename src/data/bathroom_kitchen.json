@@ -1,0 +1,12 @@
+[
+    {"alt": "bathroom_a_1", "src": "/src/assets/bathroom_kitchen/bathroom_a_1.png"},
+    {"alt": "bathroom_a_2", "src": "/src//assets/bathroom_kitchen/bathroom_a_2.jpg"},
+    {"alt": "bathroom_b_1", "src": "/src//assets/bathroom_kitchen/bathroom_b_1.jpg"},
+    {"alt": "bathroom_c_1", "src": "/src//assets/bathroom_kitchen/bathroom_c_1.png"},
+    {"alt": "bathroom_c_2", "src": "/src/assets/bathroom_kitchen/bathroom_c_2.png"},
+    {"alt": "bathroom_c_3", "src": "/src/assets/bathroom_kitchen/bathroom_c_3.png"},
+    {"alt": "kitchen_a_1", "src": "/src/assets/bathroom_kitchen/kitchen_a_1.png"},
+    {"alt": "kitchen_b_1", "src": "/src/assets/bathroom_kitchen/kitchen_b_1.png"},
+    {"alt": "kitchen_b_2", "src": "/src/assets/bathroom_kitchen/kitchen_b_2.png"},
+    {"alt": "kitchen_b_3", "src": "/src/assets/bathroom_kitchen/kitchen_b_3.png"}
+]

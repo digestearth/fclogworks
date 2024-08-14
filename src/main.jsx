@@ -5,9 +5,12 @@ import {Global, css} from '@emotion/react'
 
 import {Root} from './components/root.jsx'
 import {HomePage} from './pages/home.jsx'
+import { CarouselTest } from './pages/carouseltest.jsx'
 
 const globalStyle = css`
-  body {
+  html, body {
+    height: 100%;
+    width: 100%;
     font-family: Arial, Helvitetica, sans-serif;
     margin: 0;
     background-color: #5c5c5c;
@@ -25,7 +28,11 @@ const router = createBrowserRouter([
       </Root>
     ),
     children: [
-      {index: true, element: <HomePage />}
+      {index: true, element: <HomePage />},
+      {
+        path: "carousel",
+        element: <CarouselTest />
+      }
     ]
 }
 ])

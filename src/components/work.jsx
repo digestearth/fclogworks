@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 import deck from "../assets/homepage/deck.png";
 import kitchen from "../assets/homepage/kitchen.png";
+import { EmblaCarousel } from "./emblacarousel";
 
 const Row = styled.div`
     display: flex;
@@ -77,10 +78,8 @@ export function Work() {
                 <ImageColumn img={deck} alt="placeholder"/>
             </Row>
             <Row>
-                
                 <ImageColumn img={kitchen} alt="placeholder"/>
                 <DescriptionColumn left={false} title="Title" description="Description" link="https://www.google.com"/>
-                
             </Row>
         </>
     
