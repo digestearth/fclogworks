@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 
 import { NavBar } from "./navbar";
 import styled from "@emotion/styled";
+
+import { EmblaCarousel } from "./emblacarousel";
+import kitchen_decks from "../data/bathroom_kitchen.json";
 
 const MainDiv = styled.div`
     height: 100%;
@@ -28,14 +32,16 @@ const Content = styled.div`
 
 export function Root(props) {
     const { children } = props
+    const [carouselActive, setCarouselActive] = useState(false);
     return (
         <>
+            <EmblaCarousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/> 
             <NavBar />
             <MainDiv>
                 <Container>
                     <Content>
                         <main>
-                            {children || <Outlet/>}
+                            {children || <Outlet context={[carouselActive, setCarouselActive]}/>}
                         </main>
                     </Content>
                 </Container>

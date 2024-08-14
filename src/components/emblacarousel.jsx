@@ -16,7 +16,7 @@ const CarouselContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: #000000d7;
 
     .embla {
@@ -32,15 +32,26 @@ const CarouselContainer = styled.div`
     }
     .embla__slide {
         flex: 0 0 auto;
-        max-height: 750px;
+
+        max-height: 75vh;
+
         min-width: 0;
         max-width: 90%;
         padding-left: var(--slide-spacing);
         img {
-            max-height: 750px;
+            max-width: 100%;
+
+            max-height: 75vh;
+            min-height: 100%;
         }
-        
     }
+
+    button {
+        position: fixed;
+        top: 5vh;
+        right: 5vh;
+    }
+    
 `
 
 export function EmblaCarousel(props) {
@@ -55,6 +66,7 @@ export function EmblaCarousel(props) {
   
     return (
         <CarouselContainer>
+            <button onClick={() => setCarouselActive(false)}>X</button>
             <div className="embla" ref={emblaRef}>
                 <div className="embla__container">
                     {Object.keys(photos).map(key=>{

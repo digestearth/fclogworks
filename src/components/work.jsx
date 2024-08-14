@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import { useOutletContext } from "react-router-dom";
 
 import styled from "@emotion/styled";
 
 import deck from "../assets/homepage/deck.png";
 import kitchen from "../assets/homepage/kitchen.png";
-
-import kitchen_decks from "../data/bathroom_kitchen.json"
-
-import { EmblaCarousel } from "./emblacarousel";
 
 const Row = styled.div`
     display: flex;
@@ -72,7 +69,7 @@ function DescriptionColumn(props) {
 }
 
 export function Work(props) {
-    const [carouselActive, setCarouselActive] = useState(false);
+    const [carouselActive, setCarouselActive] = useOutletContext();
     return (
         <>
             <Row>
@@ -94,8 +91,7 @@ export function Work(props) {
                     description="Description"
                     link="https://www.google.com"
                 />
-            </Row>
-            <EmblaCarousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/>   
+            </Row>  
         </>
     
     )
