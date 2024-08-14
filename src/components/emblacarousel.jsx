@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import styled from '@emotion/styled';
 
@@ -9,8 +9,19 @@ import kitchen from "../assets/homepage/kitchen.png";
 import test from "../assets/bathroom_kitchen/bathroom_a_1.png";
 
 const CarouselContainer = styled.div`
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000d7;
 
     .embla {
+        height: 100%;
+        width: 90%;
         overflow: hidden;
         --slide-spacing: 5rem;
     }
@@ -33,7 +44,7 @@ const CarouselContainer = styled.div`
 `
 
 export function EmblaCarousel(props) {
-    const {photos} = props
+    const {carouselActive, setCarouselActive, photos} = props
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 
     useEffect(() => {
@@ -47,7 +58,7 @@ export function EmblaCarousel(props) {
             <div className="embla" ref={emblaRef}>
                 <div className="embla__container">
                     {Object.keys(photos).map(key=>{
-                        return <div className="embla__slide"><img src={photos[key].src} alt={photos[key].alt}></img></div>
+                        return <div key={key} className="embla__slide"><img src={photos[key].src} alt={photos[key].alt}></img></div>
                     })}
                 </div>
             </div>

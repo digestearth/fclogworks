@@ -1,7 +1,13 @@
+import { useState } from "react";
+import { createPortal } from "react-dom";
+
 import styled from "@emotion/styled";
 
 import deck from "../assets/homepage/deck.png";
 import kitchen from "../assets/homepage/kitchen.png";
+
+import kitchen_decks from "../data/bathroom_kitchen.json"
+
 import { EmblaCarousel } from "./emblacarousel";
 
 const Row = styled.div`
@@ -53,23 +59,25 @@ function ImageColumn(props) {
 }
 
 function DescriptionColumn(props) {
-    const {title, description, link, left} = props;
+    const {setCarouselActive, title, description, link, left} = props;
     return (
         <Column>
             <DescriptionWrapper left={left}>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <a href={link}>Link</a>
+                <button onClick={() => setCarouselActive(true)}>Gallery</button>
             </DescriptionWrapper>
         </Column>
     )
 }
 
-export function Work() {
+export function Work(props) {
+    const [carouselActive, setCarouselActive] = useState(false);
     return (
         <>
             <Row>
                 <DescriptionColumn
+                    setCarouselActive={setCarouselActive}
                     left={true}
                     title="Decks and Patios"
                     description="Recover and revive that once beautiful deck or patio! We can help you with all your deck and patio needs."
@@ -79,8 +87,15 @@ export function Work() {
             </Row>
             <Row>
                 <ImageColumn img={kitchen} alt="placeholder"/>
-                <DescriptionColumn left={false} title="Title" description="Description" link="https://www.google.com"/>
+                <DescriptionColumn
+                    setCarouselActive={setCarouselActive}
+                    left={false}
+                    title="Title"
+                    description="Description"
+                    link="https://www.google.com"
+                />
             </Row>
+            <EmblaCarousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/>   
         </>
     
     )
