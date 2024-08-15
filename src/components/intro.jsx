@@ -1,11 +1,11 @@
 import styled from "@emotion/styled"
 
 import bg from "../assets/homepage/intro.png";
-import logo from "../assets/forestcraft_outline.png";
+import logo from "../assets/forestcraft_logo.png";
 
 const GridContainer = styled.div`
     scroll-margin-top: 80px;
-    height: 610px;
+    height: 710px;
     width: 100%;
 
     display: grid;
@@ -33,7 +33,7 @@ const GridContainer = styled.div`
 
 const FcLogo = styled.div`
     grid-area: topleft;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-left: 100px;
 `
 

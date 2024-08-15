@@ -13,7 +13,7 @@ const NavContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    div {
+    div.navitems {
         flex: 0;
         height: 100%;
         display: flex;
@@ -21,11 +21,19 @@ const NavContainer = styled.div`
         min-width: 1500px;
         max-width: 100%;
 
-        /* background-color: green; */
-
         @media (max-width: 1500px) {
             min-width: 100%
         }
+    }
+
+    div.left {
+        height: 100%;
+        justify-content: flex-start
+    }
+
+    div.right{
+        margin-left: auto;
+        justify-content: flex-end
     }
 
     nav {
@@ -40,7 +48,7 @@ const NavContainer = styled.div`
     }
 
     img {
-        max-width: 80px;
+        max-width: 85px;
         margin-right: 10px;
         /* background-color: red */
     }
@@ -91,13 +99,19 @@ function SmoothLink(props) {
 export function NavBar() {
     return (
         <NavContainer>
-            <div>
-                <nav>
+            <nav>
+                <div className="navitems">
                     {/* <NavLink to="/"><img className="logo" src={logo} /></NavLink> */}
-                    <SmoothLink to="home" href="#"><img src={fc}></img></SmoothLink>
-                    <SmoothLink to="work" href="#work">Work</SmoothLink> 
-                </nav>
-            </div>
+                    <div className="left">
+                        <SmoothLink to="home" href="#"><img src={fc}></img></SmoothLink>
+                    </div>
+                    <div className="right">
+                        <SmoothLink to="work" href="#work">Work</SmoothLink> 
+                        <SmoothLink to="work" href="#work">Team</SmoothLink> 
+                        <SmoothLink to="work" href="#work">Contact</SmoothLink>
+                    </div>  
+                </div>         
+            </nav>
         </NavContainer>
     )
 
