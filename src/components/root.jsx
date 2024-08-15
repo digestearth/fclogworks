@@ -27,7 +27,6 @@ const Container = styled.div`
 const Content = styled.div`
     height: 100%;
     width: 100%;
-    margin-left: 10px;
     margin-right: 10px;
 `
 
