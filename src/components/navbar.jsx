@@ -1,6 +1,8 @@
 import styled from "@emotion/styled"
 import { NavLink } from "react-router-dom"
 
+import fc from "../assets/forestcraft_outline.png"
+
 const NavContainer = styled.div`
     flex: 0;
     width: 100%;
@@ -26,7 +28,8 @@ const NavContainer = styled.div`
     }
 
     nav {
-        align-items: left;
+        display: flex;
+        align-items: center;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -35,16 +38,19 @@ const NavContainer = styled.div`
         //justify-content: flex-end;
     }
 
-    img.logo {
-        max-width: 300px;
+    img {
+        max-width: 80px;
         margin-right: 10px;
+        /* background-color: red */
     }
 
     a {
+        /* background-color: purple; */
         color: white;
         text-decoration: none;
         font-size: 20px;
         margin-right: 20px;
+        width: min-content;
     }
 
     @keyframes linkhover {
@@ -77,7 +83,7 @@ export function NavBar() {
             <div>
                 <nav>
                     {/* <NavLink to="/"><img className="logo" src={logo} /></NavLink> */}
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/"><img src={fc}></img></NavLink>
                     <NavLink to="/about">About</NavLink>    
                 </nav>
             </div>
