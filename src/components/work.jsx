@@ -83,7 +83,6 @@ const DescriptionWrapper = styled.div`
         background-color: white;
         color: black;
         border: none;
-
     }
 `
 
@@ -120,7 +119,7 @@ export function Work(props) {
                     title="Remodel, Addition, and Construction"
                     description="A passion for building log houses from the ground up gave us a deep understanding of conventional house building techniques. We can help bring your ideas to life and make a home which is uniquely &#34;you&#34;!"
                 />
-                <ImageColumn img={deck} alt="placeholder"/>
+                <ImageColumn img={house} alt="placeholder"/>
             </Row>
             <Row>      
                 <ImageColumn img={deck} alt="placeholder"/>
