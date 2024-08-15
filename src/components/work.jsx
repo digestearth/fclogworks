@@ -8,6 +8,10 @@ import deck from "../assets/homepage/deck.png";
 import kitchen from "../assets/homepage/kitchen.png";
 import house from "../assets/homepage/house.png";
 
+const WorkDiv = styled.div`
+    scroll-margin-top: 80px;
+`
+
 const Row = styled.div`
     display: flex;
     justify-content: center;
@@ -112,33 +116,36 @@ export function Work(props) {
     const [carouselActive, setCarouselActive] = useOutletContext();
     return (
         <>
-            <Row>
-                <DescriptionColumn
-                    setCarouselActive={setCarouselActive}
-                    left={true}
-                    title="Remodel, Addition, and Construction"
-                    description="A passion for building log houses from the ground up gave us a deep understanding of conventional house building techniques. We can help bring your ideas to life and make a home which is uniquely &#34;you&#34;!"
-                />
-                <ImageColumn img={house} alt="placeholder"/>
-            </Row>
-            <Row>      
-                <ImageColumn img={deck} alt="placeholder"/>
-                <DescriptionColumn
-                    setCarouselActive={setCarouselActive}
-                    left={false}
-                    title="Deck, Patio, and Railing"
-                    description="Recover and revive that once sturdy and dependable deck. If it's old and ragged, we can bring it back to life!"
-                />
-            </Row>
-            <Row>
-                <DescriptionColumn
-                    setCarouselActive={setCarouselActive}
-                    left={true}
-                    title="Kitchen and Bathroom"
-                    description="Bathroom or kitchen feeling old or dated? Invest in your house and build the home that fits you!"
-                />
-                <ImageColumn img={kitchen} alt="placeholder"/>      
-            </Row>  
+            <WorkDiv id ="work">
+                <Row>
+                    <DescriptionColumn
+                        setCarouselActive={setCarouselActive}
+                        left={true}
+                        title="Remodel, Addition, and Construction"
+                        description="A passion for building log houses from the ground up gave us a deep understanding of conventional house building techniques. We can help bring your ideas to life and make a home which is uniquely &#34;you&#34;!"
+                    />
+                    <ImageColumn img={house} alt="placeholder"/>
+                </Row>
+                <Row>      
+                    <ImageColumn img={deck} alt="placeholder"/>
+                    <DescriptionColumn
+                        setCarouselActive={setCarouselActive}
+                        left={false}
+                        title="Deck, Patio, and Railing"
+                        description="Recover and revive that once sturdy and dependable deck. If it's old and ragged, we can bring it back to life!"
+                    />
+                </Row>
+                <Row>
+                    <DescriptionColumn
+                        setCarouselActive={setCarouselActive}
+                        left={true}
+                        title="Kitchen and Bathroom"
+                        description="Bathroom or kitchen feeling old or dated? Invest in your house and build the home that fits you!"
+                    />
+                    <ImageColumn img={kitchen} alt="placeholder"/>      
+                </Row>  
+            </WorkDiv>
+            
         </>
     )
 }

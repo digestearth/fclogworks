@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom"
 import fc from "../assets/forestcraft_outline.png"
 
 const NavContainer = styled.div`
+    position: fixed;
     flex: 0;
     width: 100%;
     height: 75px;
@@ -73,9 +74,19 @@ const NavContainer = styled.div`
         animation: none;
 
     }
-
-    
 `
+
+function SmoothLink(props) {
+    const { children, href, to} = props
+    return (
+        <a href={href} onClick={(e) => {
+            e.preventDefault()
+            document.getElementById(to).scrollIntoView({ behavior: "smooth" })
+        }}>
+            {children}
+        </a>
+    )
+}
 
 export function NavBar() {
     return (
@@ -83,11 +94,10 @@ export function NavBar() {
             <div>
                 <nav>
                     {/* <NavLink to="/"><img className="logo" src={logo} /></NavLink> */}
-                    <NavLink to="/"><img src={fc}></img></NavLink>
-                    <NavLink to="/about">About</NavLink>    
+                    <SmoothLink to="home" href="#"><img src={fc}></img></SmoothLink>
+                    <SmoothLink to="work" href="#work">Work</SmoothLink> 
                 </nav>
             </div>
-            
         </NavContainer>
     )
 

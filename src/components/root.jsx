@@ -15,6 +15,7 @@ const MainDiv = styled.div`
 `
 
 const Container = styled.div`
+    margin-top: 75px;
     height: 100%;
     width: 1500px;
     margin-bottom: 10px;
@@ -28,6 +29,11 @@ const Content = styled.div`
     height: 100%;
     width: 100%;
     margin-right: 10px;
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 export function Root(props) {
