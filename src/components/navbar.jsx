@@ -28,7 +28,11 @@ const NavContainer = styled.div`
 
     div.left {
         height: 100%;
-        justify-content: flex-start
+        justify-content: flex-start;
+
+        @media (max-width: 1500px) {
+            margin-left: 10px;
+        }
     }
 
     div.right{
@@ -37,10 +41,15 @@ const NavContainer = styled.div`
     }
 
     nav {
+        min-width: 1500px;
         display: flex;
         align-items: center;
         margin-left: 10px;
         margin-right: 10px;
+
+        @media (max-width: 1500px) {
+            min-width: 100%
+        }
     }
 
     nav.right {
@@ -106,6 +115,7 @@ export function NavBar() {
                         <SmoothLink to="home" href="#"><img src={fc}></img></SmoothLink>
                     </div>
                     <div className="right">
+                        <SmoothLink to="home" href="#home">Home</SmoothLink> 
                         <SmoothLink to="work" href="#work">Work</SmoothLink> 
                         <SmoothLink to="work" href="#work">Team</SmoothLink> 
                         <SmoothLink to="work" href="#work">Contact</SmoothLink>

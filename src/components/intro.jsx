@@ -35,10 +35,12 @@ const FcLogo = styled.div`
     grid-area: topleft;
     margin-top: 50px;
     margin-left: 100px;
+    margin-right: 100px;
 `
 
 const IntroBlurb = styled.div`
     margin-left: 100px;
+    margin-right: 100px;
     color: white;
     /* background-color: purple; */
     grid-area: botleft;
@@ -64,7 +66,7 @@ export function Intro(props) {
                 <IntroBlurb>
                     
                     <p>Locally owned general contracting services operating out of the Bend and Portland Oregon areas.
-                        Expert counsel and labor for personal construction projects, from bathroom remodels to newhome construction</p>
+                        Expert counsel and labor for personal construction projects, from bathroom remodels to new homes.</p>
                 </IntroBlurb>
             </GridContainer>
         </>
