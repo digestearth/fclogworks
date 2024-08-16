@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { useOutletContext } from "react-router-dom";
-
 import styled from "@emotion/styled";
+
+import chevron_down from "../assets/icons/chevron_down.svg";
+
+import { Separator } from "./separator";
+import { SmoothLink } from "./smoothlink";
 
 import deck from "../assets/homepage/deck.png";
 import kitchen from "../assets/homepage/kitchen.png";
@@ -10,6 +14,10 @@ import house from "../assets/homepage/house.png";
 
 const WorkDiv = styled.div`
     scroll-margin-top: 80px;
+
+    hr {
+        width: 70%;
+    }
 `
 
 const Row = styled.div`
@@ -191,8 +199,37 @@ function WorkBanner(props) {
     }
 }
 
-const Separator = styled.div`
-    height: 50px;
+const Title = styled.div`
+    a {
+        text-decoration: none;
+        color: inherit;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font: inherit;
+    }
+
+    a:hover {
+        /* opacity: 0.9; */
+    }
+    font-size: 38pt;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    scroll-margin-top: 80px;
+
+    h1 {
+        all: unset;
+        margin-left: 30px;
+        margin-right: 30px;
+        color: #ffffff69;
+    }
+
+    i {
+        color: #ffffff69;
+    }
 `
 
 export function Work(props) {
@@ -200,8 +237,13 @@ export function Work(props) {
 
     return (
         <>
-            <WorkDiv id ="work">
+            <WorkDiv>
                 <Separator/>
+                    <Title id ="work">
+                        <SmoothLink to="work" href="#work">
+                            <i class="fa-solid fa-chevron-down fa-2xs"/><h1>Our Work</h1><i class="fa-solid fa-chevron-down fa-2xs"/>
+                        </SmoothLink>
+                    </Title>
                 <WorkBanner
                     setCarouselActive={setCarouselActive}
                     img = {house}

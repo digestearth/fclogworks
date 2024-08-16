@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom"
 
 import fc from "../assets/forestcraft_outline.png"
 
+import {SmoothLink} from "./smoothlink"
+
 const NavContainer = styled.div`
     position: fixed;
     flex: 0;
@@ -92,18 +94,6 @@ const NavContainer = styled.div`
 
     }
 `
-
-function SmoothLink(props) {
-    const { children, href, to} = props
-    return (
-        <a href={href} onClick={(e) => {
-            e.preventDefault()
-            document.getElementById(to).scrollIntoView({ behavior: "smooth" })
-        }}>
-            {children}
-        </a>
-    )
-}
 
 export function NavBar() {
     return (
