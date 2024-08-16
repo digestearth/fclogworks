@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 
 import { NavBar } from "./navbar";
+import { FootBar } from "./footbar";
 import styled from "@emotion/styled";
 
 import { EmblaCarousel } from "./emblacarousel";
@@ -69,8 +70,7 @@ export function Root(props) {
                     </Content>
                 </Container>
             </MainDiv>
-            
-            
+            <FootBar />
         </>
     )
 }
