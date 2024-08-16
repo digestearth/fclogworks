@@ -13,7 +13,8 @@ const TeamBackground = styled.div`
     min-height: 650px;
     height: fit-content;
     width: 100%;
-    background-color: #c29d8b;
+    /* background-color: #c29d8b; */
+    background-color: #525252;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,7 +65,8 @@ const TeamPortrait = styled.div`
         margin-left: 10px;
     }
 
-    color: black;
+    /* color: black; */
+    color: white;
 `
 
 function Portrait(props) {
@@ -84,10 +86,9 @@ function Portrait(props) {
 export function Team(props) {
     return (
         <>
-            <Separator/>
-            <Separator/>
+            <Separator/>  
             <TeamBackground>
-                <SectionTitle to="team" href="#team" content="Meet the Team" color="#353535"/>
+                <SectionTitle to="team" href="#team" content="Meet the Team" color="#ffffff"/>
                 <TeamContainer>
                     {Object.keys(team).map((key) => {
                         return (
