@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 
 import { NavBar } from "./navbar";
@@ -39,6 +39,23 @@ const Content = styled.div`
 export function Root(props) {
     const { children } = props
     const [carouselActive, setCarouselActive] = useState(false);
+
+    const [mobile, setMobile] = useState(window.matchMedia("(max-width: 920px)").matches);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 920px)");
+    
+        const handleMediaChange = (event) => {
+            setMobile(event.matches);
+        };
+    
+        mediaQuery.addEventListener('change', handleMediaChange);
+    
+        return () => {
+            mediaQuery.removeEventListener('change', handleMediaChange);
+        };
+    }, []);
+
     return (
         <>
             {carouselActive ? <EmblaCarousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/> : null}
@@ -47,7 +64,7 @@ export function Root(props) {
                 <Container>
                     <Content>
                         <main>
-                            {children || <Outlet context={[carouselActive, setCarouselActive]}/>}
+                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive}}/>}
                         </main>
                     </Content>
                 </Container>

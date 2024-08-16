@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { useOutletContext } from "react-router-dom";
 
@@ -17,7 +17,7 @@ const Row = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 10px;
-    width: 100%;
+    min-width: 100%;
     /* background-color: orange; */
 
     h2 {
@@ -29,7 +29,6 @@ const Row = styled.div`
 const Column = styled.div`
     margin: 10px;
     flex: 1;
-    min-width: 200px;
     
     display: flex;
     flex-direction: column;
@@ -41,23 +40,37 @@ const Column = styled.div`
         width: 100%;
         border-radius: 10px;
     }
+
+    @media (max-width: 650px) {
+        min-width: 90%;
+    }
 ` 
 
 const DescriptionWrapper = styled.div`
     margin-left: ${props => props.left == false ? "60px" : "0"};
     width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 920px) {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
     h3 {
         all: unset;
         font-size: 32pt;
-        @media (max-width: 1000px) {
-            font-size: 24pt;
+
+        @media (max-width: 1100px) {
+            font-size: 28pt;
         }
     }
 
     p {
         font-size: 14pt;
-        @media (max-width: 1000px) {
+
+        @media (max-width: 1100px) {
             font-size: 12pt;
         }
     }
@@ -79,6 +92,10 @@ const DescriptionWrapper = styled.div`
         height: 75px;
         
         border: white 2px solid;
+
+        @media (max-width: 920px) {
+            width: 100%;
+        }
     }
 
     button:hover {
@@ -94,56 +111,120 @@ function ImageColumn(props) {
     const {img, alt} = props;
     return (
         <Column>
-            <img src={img} alt={alt} style={{width: "100%"}}/>
+            <img src={img} alt={alt}/>
         </Column>   
     )
 }
 
-function DescriptionColumn(props) {
-    const {setCarouselActive, title, description, left} = props;
-    return (
-        <Column>
-            <DescriptionWrapper left={left}>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <button onClick={() => setCarouselActive(true)}>Gallery</button>
-            </DescriptionWrapper>
-        </Column>
-    )
+const BannerRow = styled.div`
+    margin-top: 20px;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 1500px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    img {
+        width: 100%;
+        min-width: 600px;
+        border-radius: 10px;
+
+    }
+`
+
+const BannerLeft = styled.div`
+    grid-area: "left";
+`
+const BannerRight = styled.div`
+    grid-area: "right";
+`
+
+function WorkBanner(props) {
+    const {setCarouselActive, orientation, title, description, img, alt} = props;
+    if (orientation == 'left') {
+        return (
+            <BannerRow>
+                <BannerLeft>
+                    <DescriptionWrapper left={true}>
+                        <h3>{title}</h3>
+                        <p>{description}</p>
+                        <button onClick={() => setCarouselActive(true)}>Gallery</button>
+                    </DescriptionWrapper> 
+                </BannerLeft>
+                <BannerRight>
+                    <img src={img} alt={alt}/>
+                </BannerRight>
+            </BannerRow>
+        )
+    } else if (orientation == 'right') {
+        return (
+            <BannerRow>
+                <BannerLeft>
+                    <img src={img} alt={alt}/>
+                </BannerLeft>
+                <BannerRight>
+                    <DescriptionWrapper left={false}>
+                        <h3>{title}</h3>
+                        <p>{description}</p>
+                        <button onClick={() => setCarouselActive(true)}>Gallery</button>
+                    </DescriptionWrapper>    
+                </BannerRight>
+            </BannerRow>
+        )
+    } else if (orientation == 'stacked') {
+        return (
+            <>
+                <Row>
+                    <ImageColumn img={img} alt={alt}/>
+                </Row>
+                <Row>
+                    <DescriptionWrapper left={true}>
+                        <h3>{title}</h3>
+                        <p>{description}</p>
+                        <button onClick={() => setCarouselActive(true)}>Gallery</button>
+                    </DescriptionWrapper>        
+                </Row>
+            </>         
+        )
+    }
 }
 
+const Separator = styled.div`
+    height: 50px;
+`
+
 export function Work(props) {
-    const [carouselActive, setCarouselActive] = useOutletContext();
+    const {mobile, carouselActive, setCarouselActive} = useOutletContext();
+
     return (
         <>
             <WorkDiv id ="work">
-                <Row>
-                    <DescriptionColumn
-                        setCarouselActive={setCarouselActive}
-                        left={true}
-                        title="Remodel, Addition, and Construction"
-                        description="A passion for building log houses from the ground up gave us a deep understanding of conventional house building techniques. We can help bring your ideas to life and make a home which is uniquely &#34;you&#34;!"
-                    />
-                    <ImageColumn img={house} alt="placeholder"/>
-                </Row>
-                <Row>      
-                    <ImageColumn img={deck} alt="placeholder"/>
-                    <DescriptionColumn
-                        setCarouselActive={setCarouselActive}
-                        left={false}
-                        title="Deck, Patio, and Railing"
-                        description="Recover and revive that once sturdy and dependable deck. If it's old and ragged, we can bring it back to life!"
-                    />
-                </Row>
-                <Row>
-                    <DescriptionColumn
-                        setCarouselActive={setCarouselActive}
-                        left={true}
-                        title="Kitchen and Bathroom"
-                        description="Bathroom or kitchen feeling old or dated? Invest in your house and build the home that fits you!"
-                    />
-                    <ImageColumn img={kitchen} alt="placeholder"/>      
-                </Row>  
+                <Separator/>
+                <WorkBanner
+                    setCarouselActive={setCarouselActive}
+                    img = {house}
+                    orientation ={mobile ? "stacked" : "left"}
+                    title = "Exterior Additions"
+                    description = "A passion for building log houses from the ground up gave us a deep understanding of conventional house building techniques. We can help bring your ideas to life and make a home which is uniquely &#34;you&#34;!"  
+                />
+                <Separator/>
+                <WorkBanner
+                    setCarouselActive={setCarouselActive}
+                    orientation ={mobile ? "stacked" : "right"}
+                    img = {deck}
+                    title = "Decks and Patios"
+                    description = "Recover and revive that once sturdy and dependable deck. If it's old and ragged, we can bring it back to life!"   
+                />
+                <Separator/>
+                <WorkBanner
+                    setCarouselActive={setCarouselActive}
+                    orientation ={mobile ? "stacked" : "left"}
+                    img = {kitchen}
+                    title = "Kitchens and Bathrooms"
+                    description = "Bathroom or kitchen feeling old or dated? Invest in your house and build the home that fits you!"
+                />
             </WorkDiv>
             
         </>
