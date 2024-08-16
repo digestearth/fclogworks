@@ -6,9 +6,6 @@ import { SectionTitle } from './sectiontitle';
 
 import team from '../data/team.json';
 
-const portrait_width = "300px";
-const text_margin = "10px";
-
 const TeamBackground = styled.div`
     min-height: 650px;
     height: fit-content;
@@ -30,25 +27,38 @@ const TeamContainer = styled.div`
 `
 
 const TeamPortrait = styled.div`
-    width: ${portrait_width};
+    width: 300px;
+
     margin: 10px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
-    /* background-color: #777777; */
+
+    @media (max-width: 680px) {
+        width: 200px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 
     img {
         width: 100%;
     }
 
     div {
-        width: calc(${portrait_width} - ${text_margin} - ${text_margin});
+        width: 280px;
+
+        
         height: fit-content;
         display: flex;
         flex-direction: column;
         align-items: start;
-        margin-left: ${text_margin};
-        margin-right: ${text_margin};
+        margin-left: 10px;
+        margin-right: 10px;
+        
+        @media (max-width: 680px) {
+            width: 180px;
+        }
     }
 
     h2 {
@@ -70,6 +80,8 @@ const TeamPortrait = styled.div`
 `
 
 function Portrait(props) {
+    const portrait_width = "300px";
+    const text_margin = "10px";
     const {src, name, role, bio} = props;
     return (
         <TeamPortrait>
