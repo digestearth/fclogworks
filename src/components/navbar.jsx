@@ -78,6 +78,12 @@ const NavContainer = styled.div`
         to {color: #a7a7a7}
     }
 
+    button:hover {
+        color: #a7a7a7;
+        animation-name: linkhover;
+        animation-duration: 500ms;
+    }
+
     a:hover {
         color: #a7a7a7;
         animation-name: linkhover;
@@ -95,7 +101,15 @@ const NavContainer = styled.div`
     }
 `
 
-export function NavBar() {
+const Hamburger = styled.button`
+    all: unset;
+
+    margin-right: 20px;
+
+`
+
+export function NavBar(props) {
+    const {mobile} = props
     return (
         <NavContainer>
             <nav>
@@ -105,11 +119,21 @@ export function NavBar() {
                         <SmoothLink to="home" href="#"><img src={fc}></img></SmoothLink>
                     </div>
                     <div className="right">
-                        <SmoothLink to="home" href="#home">Home</SmoothLink> 
-                        <SmoothLink to="work" href="#work">Work</SmoothLink> 
-                        <SmoothLink to="team" href="#team">Team</SmoothLink> 
-                        <SmoothLink to="contact" href="#contact">Contact</SmoothLink>
-                    </div>  
+                        {mobile ?
+                            <Hamburger>
+                                <i className="fa-solid fa-bars fa-2xl"/>
+                            </Hamburger>
+                            
+                            :
+                            <>
+                                <SmoothLink to="home" href="#home">Home</SmoothLink> 
+                                <SmoothLink to="work" href="#work">Work</SmoothLink> 
+                                <SmoothLink to="team" href="#team">Team</SmoothLink> 
+                                <SmoothLink to="contact" href="#contact">Contact</SmoothLink>
+                            </>      
+                        }
+                    </div> 
+                    
                 </div>         
             </nav>
         </NavContainer>

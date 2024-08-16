@@ -60,7 +60,7 @@ export function Root(props) {
     return (
         <>
             {carouselActive ? <EmblaCarousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/> : null}
-            <NavBar />
+            <NavBar mobile={mobile}/>
             <MainDiv>
                 <Container>
                     <Content>
