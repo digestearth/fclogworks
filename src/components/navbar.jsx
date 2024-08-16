@@ -107,8 +107,8 @@ export function NavBar() {
                     <div className="right">
                         <SmoothLink to="home" href="#home">Home</SmoothLink> 
                         <SmoothLink to="work" href="#work">Work</SmoothLink> 
-                        <SmoothLink to="work" href="#work">Team</SmoothLink> 
-                        <SmoothLink to="work" href="#work">Contact</SmoothLink>
+                        <SmoothLink to="team" href="#team">Team</SmoothLink> 
+                        <SmoothLink to="contact" href="#contact">Contact</SmoothLink>
                     </div>  
                 </div>         
             </nav>
