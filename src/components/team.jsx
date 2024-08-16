@@ -99,6 +99,7 @@ export function Team(props) {
     return (
         <>
             <Separator/>  
+            <Separator/>  
             <TeamBackground>
                 <SectionTitle to="team" href="#team" content="Meet the Team" color="#ffffff"/>
                 <TeamContainer>
