@@ -57,10 +57,12 @@ export function Root(props) {
         };
     }, []);
 
+    const [hamburgerActive, setHamburgerActive] = useState(false);
+
     return (
         <>
             {carouselActive ? <EmblaCarousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/> : null}
-            <NavBar mobile={mobile}/>
+            <NavBar mobile={mobile} hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/>
             <MainDiv>
                 <Container>
                     <Content>

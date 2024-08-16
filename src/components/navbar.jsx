@@ -1,5 +1,7 @@
-import styled from "@emotion/styled"
+import {useEffect} from "react"
 import { NavLink } from "react-router-dom"
+import styled from "@emotion/styled"
+
 
 import fc from "../assets/forestcraft_outline.png"
 
@@ -105,11 +107,15 @@ const Hamburger = styled.button`
     all: unset;
 
     margin-right: 20px;
-
 `
 
 export function NavBar(props) {
-    const {mobile} = props
+    const {mobile, hamburgerActive, setHamburgerActive} = props
+
+    const toggleHamburger = () => {
+        setHamburgerActive(prevState => !prevState);
+    }
+
     return (
         <NavContainer>
             <nav>
@@ -120,8 +126,13 @@ export function NavBar(props) {
                     </div>
                     <div className="right">
                         {mobile ?
-                            <Hamburger>
-                                <i className="fa-solid fa-bars fa-2xl"/>
+                            <Hamburger onClick={toggleHamburger}>
+                                {
+                                    hamburgerActive ?
+                                    <i className="fa-solid fa-xmark fa-2xl"/>
+                                    :
+                                    <i className="fa-solid fa-bars fa-2xl"/>
+                                }
                             </Hamburger>
                             
                             :
