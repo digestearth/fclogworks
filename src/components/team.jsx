@@ -4,6 +4,8 @@ import styled from '@emotion/styled';
 import { Separator } from './separator';
 import { SectionTitle } from './sectiontitle';
 
+import {color_bg, color_text, color_element} from './colors.jsx'
+
 import team from '../data/team.json';
 
 const TeamBackground = styled.div`
@@ -11,12 +13,12 @@ const TeamBackground = styled.div`
     height: fit-content;
     width: 100%;
     /* background-color: #c29d8b; */
-    background-color: #525252;
+    background-color: ${color_element};
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    border-radius: 5px;
 `
 
 const TeamContainer = styled.div`
@@ -76,7 +78,7 @@ const TeamPortrait = styled.div`
     }
 
     /* color: black; */
-    color: white;
+    color: ${color_bg};
 `
 
 function Portrait(props) {
@@ -101,7 +103,7 @@ export function Team(props) {
             <Separator/>  
             <Separator/>  
             <TeamBackground>
-                <SectionTitle to="team" href="#team" content="Meet the Team" color="#ffffff"/>
+                <SectionTitle to="team" href="#team" content="Meet the Team" color={color_bg}/>
                 <TeamContainer>
                     {Object.keys(team).map((key) => {
                         return (

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import {Global, css} from '@emotion/react'
 
+import {color_bg, color_text, color_element} from './components/colors.jsx'
+
 import {Root} from './components/root.jsx'
 import {HomePage} from './pages/home.jsx'
 import { CarouselTest } from './pages/carouseltest.jsx'
@@ -13,10 +15,11 @@ const globalStyle = css`
     width: 100%;
     font-family: "Moderustic", Arial, sans-serif;
     margin: 0;
-    background-color: #5c5c5c;
-    color: white;
+    /* background-color: #5c5c5c; */
+    /* color: white; */
     overflow-x: hidden;
-    /* background-color: #eeede9; */
+    background-color: ${color_bg};
+    color: ${color_text};
   }
 `
 

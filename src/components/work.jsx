@@ -9,6 +9,8 @@ import { Separator } from "./separator";
 import { SmoothLink } from "./smoothlink";
 import {SectionTitle} from "./sectiontitle";
 
+import {color_bg, color_text, color_element} from './colors.jsx'
+
 import deck from "../assets/homepage/deck.png";
 import kitchen from "../assets/homepage/kitchen.png";
 import house from "../assets/homepage/house.png";
@@ -85,8 +87,8 @@ const DescriptionWrapper = styled.div`
     }
 
     @keyframes buttonhover{
-        from {background-color: #5c5c5c; color: white; border: white 2px solid;}
-        to {background-color: white; color: black; border: none;}
+        from {background-color: ${color_bg}; color: ${color_text}; border: ${color_text} 2px solid;}
+        to {background-color: ${color_element}; color: ${color_bg}; border: none;}
     }
 
     button {
@@ -100,7 +102,7 @@ const DescriptionWrapper = styled.div`
         width: 200px;
         height: 75px;
         
-        border: white 2px solid;
+        border: ${color_text} 2px solid;
 
         @media (max-width: 920px) {
             width: 100%;
@@ -110,8 +112,8 @@ const DescriptionWrapper = styled.div`
     button:hover {
         animation-name: buttonhover;
         animation-duration: 250ms;
-        background-color: white;
-        color: black;
+        background-color: ${color_element};
+        color: ${color_bg};
         border: none;
     }
 `
@@ -207,7 +209,7 @@ export function Work(props) {
         <>
             <WorkDiv>
                 <Separator/>
-                <SectionTitle to="work" href="#work" content="Our Work" color="#ffffff"/>
+                <SectionTitle to="work" href="#work" content="Our Work" color={color_text}/>
                 <WorkBanner
                     setCarouselActive={setCarouselActive}
                     img = {house}

@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import { Separator } from './separator'
 import { SectionTitle } from './sectiontitle'
 
+import {color_bg, color_text, color_element} from './colors.jsx'
+
 const ContactDiv = styled.div`
     height: min-content;
     display: flex;
@@ -57,9 +59,10 @@ const CardTray = styled.div`
 const ContactCard = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #525252;
+    background-color: #35373a;
     justify-content: center;
     white-space: nowrap;
+    color: white;
     
     width: min-content;
     height: 150px;
@@ -72,7 +75,7 @@ export function Contact() {
             <Separator/>
             <Separator/>
             <ContactDiv>
-                <SectionTitle to="contact" href="#contact" content="Contact Us" color="white"/>
+                <SectionTitle to="contact" href="#contact" content="Contact Us" color={color_text}/>
                 <Separator/>
                 <ContactContent>
                     <p>

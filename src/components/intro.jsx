@@ -1,5 +1,7 @@
 import styled from "@emotion/styled"
 
+import {color_bg, color_text, color_element} from './colors.jsx'
+
 import bg from "../assets/homepage/intro.png";
 import logo from "../assets/forestcraft_logo.png";
 
@@ -14,6 +16,8 @@ const GridContainer = styled.div`
         "botleft botright";
     grid-template-columns: min-content 1fr;
     grid-template-rows: 1fr 4fr;
+
+    
 
     @media (max-width: 1100px) {
         height: 600px;
@@ -31,6 +35,8 @@ const GridContainer = styled.div`
         width: 100%;
         object-fit: cover;
         grid-area: 1 / 1 / 3 / 3;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 `
 
