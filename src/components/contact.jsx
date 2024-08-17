@@ -59,7 +59,7 @@ const CardTray = styled.div`
 const ContactCard = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #35373a;
+    background-color: ${color_element};
     justify-content: center;
     white-space: nowrap;
     color: white;

@@ -2,8 +2,9 @@ import {useEffect} from "react"
 import { NavLink } from "react-router-dom"
 import styled from "@emotion/styled"
 
+import {color_bg, color_text, color_element} from "./colors"
 
-import fc from "../assets/forestcraft_outline.png"
+import fc from "../assets/logo_blackwhite.svg"
 
 import {SmoothLink} from "./smoothlink"
 
@@ -12,7 +13,7 @@ const NavContainer = styled.div`
     flex: 0;
     width: 100%;
     height: 75px;
-    background-color: #35373a;
+    background-color: ${color_element};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +33,7 @@ const NavContainer = styled.div`
 
     div.left {
         height: 100%;
+        display: flex;
         justify-content: flex-start;
 
         @media (max-width: 1500px) {
@@ -61,6 +63,7 @@ const NavContainer = styled.div`
     }
 
     img {
+        margin-top: 5px;
         max-width: 85px;
         margin-right: 10px;
         /* background-color: red */
@@ -68,7 +71,7 @@ const NavContainer = styled.div`
 
     a {
         /* background-color: purple; */
-        color: white;
+        color: ${color_bg};
         text-decoration: none;
         font-size: 20px;
         margin-right: 20px;
@@ -76,7 +79,7 @@ const NavContainer = styled.div`
     }
 
     @keyframes linkhover {
-        from {color: white;}
+        from {color: ${color_bg};}
         to {color: #a7a7a7}
     }
 
