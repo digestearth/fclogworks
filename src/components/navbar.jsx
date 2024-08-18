@@ -106,10 +106,14 @@ const NavContainer = styled.div`
     }
 `
 
-const Hamburger = styled.button`
+const HamburgerButton = styled.button`
     all: unset;
 
     margin-right: 20px;
+
+    i {
+        color: ${color_bg};
+    }
 `
 
 export function NavBar(props) {
@@ -129,14 +133,14 @@ export function NavBar(props) {
                     </div>
                     <div className="right">
                         {mobile ?
-                            <Hamburger onClick={toggleHamburger}>
+                            <HamburgerButton onClick={toggleHamburger}>
                                 {
                                     hamburgerActive ?
                                     <i className="fa-solid fa-xmark fa-2xl"/>
                                     :
                                     <i className="fa-solid fa-bars fa-2xl"/>
                                 }
-                            </Hamburger>
+                            </HamburgerButton>
                             
                             :
                             <>
