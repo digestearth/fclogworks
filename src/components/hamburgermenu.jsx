@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-import {color_bg, color_text, color_element, color_subelement} from './colors.jsx'
+import {color_bg, color_text, color_element, color_subelement, color_element_accent, color_element_inset} from './colors.jsx'
 
 import {SmoothLink} from './smoothlink.jsx'
 
@@ -9,7 +9,7 @@ const MenuBg = styled.div`
     right: 0;
     top: 75px;
     width: 300px;
-    background-color: ${color_element};
+    background-color: ${color_element_inset};
     color: ${color_text};
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ const MenuBg = styled.div`
         all: unset;
         margin-left: 20px;
         width: 260px;
-        border: 1px solid #7b5c31;
+        border: 1px solid ${color_element_accent};
     }
 
     div {
@@ -49,7 +49,7 @@ const MenuBg = styled.div`
     }
 `
 
-export function HamburgerMenu() {https://www.ey.com/en_us/industries
+export function HamburgerMenu() {
     return (
         <MenuBg>
             <SmoothLink to="home" href="#home"><div>Home</div></SmoothLink> 
