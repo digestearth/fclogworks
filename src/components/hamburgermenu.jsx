@@ -24,8 +24,8 @@ const MenuBg = styled.div`
     }
 
     @keyframes buttonhover{
-        from {background-color: ${color_element}; color: ${color_subelement};}
-        to {background-color: ${color_subelement}; color: ${color_element};}
+        from {background-color: ${color_element_inset}; color: ${color_subelement};}
+        to {background-color: ${color_subelement}; color: ${color_element_inset};}
     }
 
     a:hover {
@@ -49,16 +49,17 @@ const MenuBg = styled.div`
     }
 `
 
-export function HamburgerMenu() {
+export function HamburgerMenu(props) {
+    const {HamburgerActive, setHamburgerActive} = props
     return (
         <MenuBg>
-            <SmoothLink to="home" href="#home"><div>Home</div></SmoothLink> 
+            <SmoothLink to="home" href="#home" setHamburgerActive={setHamburgerActive}><div>Home</div></SmoothLink> 
             <hr/>
-            <SmoothLink to="work" href="#work"><div>Work</div></SmoothLink> 
+            <SmoothLink to="work" href="#work" setHamburgerActive={setHamburgerActive}><div>Work</div></SmoothLink> 
             <hr/>
-            <SmoothLink to="team" href="#team"><div>Team</div></SmoothLink> 
+            <SmoothLink to="team" href="#team" setHamburgerActive={setHamburgerActive}><div>Team</div></SmoothLink> 
             <hr/>
-            <SmoothLink to="contact" href="#contact"><div>Contact</div></SmoothLink>
+            <SmoothLink to="contact" href="#contact" setHamburgerActive={setHamburgerActive}><div>Contact</div></SmoothLink>
         </MenuBg>
     )
 }
