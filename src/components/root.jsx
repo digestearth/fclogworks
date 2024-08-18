@@ -3,6 +3,7 @@ import { Outlet, NavLink } from "react-router-dom";
 
 import { NavBar } from "./navbar";
 import { FootBar } from "./footbar";
+import { HamburgerMenu } from "./hamburgermenu";
 import styled from "@emotion/styled";
 
 import { EmblaCarousel } from "./emblacarousel";
@@ -42,12 +43,14 @@ export function Root(props) {
     const [carouselActive, setCarouselActive] = useState(false);
 
     const [mobile, setMobile] = useState(window.matchMedia("(max-width: 920px)").matches);
+    const [hamburgerActive, setHamburgerActive] = useState(false);
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 920px)");
     
         const handleMediaChange = (event) => {
             setMobile(event.matches);
+            setHamburgerActive(false);
         };
     
         mediaQuery.addEventListener('change', handleMediaChange);
@@ -57,12 +60,13 @@ export function Root(props) {
         };
     }, []);
 
-    const [hamburgerActive, setHamburgerActive] = useState(false);
+    
 
     return (
         <>
             {carouselActive ? <EmblaCarousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/> : null}
             <NavBar mobile={mobile} hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/>
+            {hamburgerActive ? <HamburgerMenu hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/> : <></>}
             <MainDiv>
                 <Container>
                     <Content>
