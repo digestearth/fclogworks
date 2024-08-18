@@ -6,7 +6,7 @@ import { FootBar } from "./footbar";
 import { HamburgerMenu } from "./hamburgermenu";
 import styled from "@emotion/styled";
 
-import { EmblaCarousel } from "./emblacarousel";
+import { Carousel } from "./emblacarousel";
 import kitchen_decks from "../data/bathroom_kitchen.json";
 
 const MainDiv = styled.div`
@@ -64,8 +64,8 @@ export function Root(props) {
 
     return (
         <>
-            {carouselActive ? <EmblaCarousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/> : null}
             <NavBar mobile={mobile} hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/>
+            {carouselActive ? <Carousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/> : null}
             {hamburgerActive ? <HamburgerMenu hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/> : <></>}
             <MainDiv>
                 <Container>

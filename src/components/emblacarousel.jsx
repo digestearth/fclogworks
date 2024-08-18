@@ -54,7 +54,7 @@ const CarouselContainer = styled.div`
     
 `
 
-export function EmblaCarousel(props) {
+export function Carousel(props) {
     const {carouselActive, setCarouselActive, photos} = props
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 

@@ -7,7 +7,6 @@ import {color_bg, color_text, color_element} from './components/colors.jsx'
 
 import {Root} from './components/root.jsx'
 import {HomePage} from './pages/home.jsx'
-import { CarouselTest } from './pages/carouseltest.jsx'
 
 const globalStyle = css`
   html, body {
@@ -33,11 +32,7 @@ const router = createBrowserRouter([
       </Root>
     ),
     children: [
-      {index: true, element: <HomePage />},
-      {
-        path: "carousel",
-        element: <CarouselTest />
-      }
+      {index: true, element: <HomePage />}
     ]
 }
 ])
