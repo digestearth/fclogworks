@@ -152,8 +152,15 @@ const BannerRight = styled.div`
     grid-area: "right";
 `
 
+function galleryButtonClicked(props) {
+    const {setCarouselActive, setHamburgerActive} = props;
+    setCarouselActive(true);
+    setHamburgerActive(false);
+    console.log("Gallery button clicked");
+}
+
 function WorkBanner(props) {
-    const {setCarouselActive, orientation, title, description, img, alt} = props;
+    const {setCarouselActive, setHamburgerActive, orientation, title, description, img, alt} = props;
     if (orientation == 'left') {
         return (
             <BannerRow>
@@ -161,7 +168,7 @@ function WorkBanner(props) {
                     <DescriptionWrapper left={true}>
                         <h3>{title}</h3>
                         <p>{description}</p>
-                        <button onClick={() => setCarouselActive(true)}>Gallery</button>
+                        <button onClick={() => galleryButtonClicked(props)}>Gallery</button>
                     </DescriptionWrapper> 
                 </BannerLeft>
                 <BannerRight>
@@ -179,7 +186,7 @@ function WorkBanner(props) {
                     <DescriptionWrapper left={false}>
                         <h3>{title}</h3>
                         <p>{description}</p>
-                        <button onClick={() => setCarouselActive(true)}>Gallery</button>
+                        <button onClick={() => galleryButtonClicked(props)}>Gallery</button>
                     </DescriptionWrapper>    
                 </BannerRight>
             </BannerRow>
@@ -194,7 +201,7 @@ function WorkBanner(props) {
                     <DescriptionWrapper left={true}>
                         <h3>{title}</h3>
                         <p>{description}</p>
-                        <button onClick={() => setCarouselActive(true)}>Gallery</button>
+                        <button onClick={() => galleryButtonClicked(props)}>Gallery</button>
                     </DescriptionWrapper>        
                 </Row>
             </>         
@@ -203,7 +210,7 @@ function WorkBanner(props) {
 }
 
 export function Work(props) {
-    const {mobile, carouselActive, setCarouselActive} = useOutletContext();
+    const {mobile, carouselActive, setCarouselActive, setHamburgerActive} = useOutletContext();
 
     return (
         <>
@@ -212,6 +219,7 @@ export function Work(props) {
                 <SectionTitle to="work" href="#work" content="Our Work" color={color_text}/>
                 <WorkBanner
                     setCarouselActive={setCarouselActive}
+                    setHamburgerActive={setHamburgerActive}
                     img = {house}
                     orientation ={mobile ? "stacked" : "left"}
                     title = "Exterior Additions"
@@ -220,6 +228,7 @@ export function Work(props) {
                 <Separator/>
                 <WorkBanner
                     setCarouselActive={setCarouselActive}
+                    setHamburgerActive={setHamburgerActive}
                     orientation ={mobile ? "stacked" : "right"}
                     img = {deck}
                     title = "Decks and Patios"
@@ -228,6 +237,7 @@ export function Work(props) {
                 <Separator/>
                 <WorkBanner
                     setCarouselActive={setCarouselActive}
+                    setHamburgerActive={setHamburgerActive}
                     orientation ={mobile ? "stacked" : "left"}
                     img = {kitchen}
                     title = "Kitchens and Bathrooms"

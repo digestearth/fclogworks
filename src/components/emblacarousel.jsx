@@ -18,7 +18,7 @@ const CarouselContainer = styled.div`
     justify-content: center;
     align-items: center;
     
-    background-color: #000000e8;
+    background-color: #000000d6;
 
     .embla {
         overflow: hidden;
@@ -31,39 +31,70 @@ const CarouselContainer = styled.div`
         /* margin-left: calc(var(--slide-spacing) * -1); */
         height: 100%;
         width: 100%;
+        margin-top: auto;
     }
     .embla__slide {
         flex: 0 0 100%;
         height: 100%;
         /* padding-left: var(--slide-spacing); */
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        object-fit: contain;
+        /* flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; */
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .photo {
+        min-height: 100%;
+        max-height: 100%;
+        width: auto;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
-    }
+        /* background-color: green; */
 
-    img {
-        max-height: 80%;
-    }
-
-    .caption {
-        height: 10%;
-        width: 60%;
-        /* background-color: black; */
-        color: white;
-        bottom: 0;
-
-        p {
-            margin: 10px;
+        img {
+            max-height: 100%;
         }
     }
 
 
+    .caption {
+        height: 100px;
+        width: 100%;
+        background-image: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.3) 99%);
+        color: white;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
 
-    button {
+        p {
+            width: 60%;
+            margin: 10px;
+            margin-top: 15px;
+        }
+    }
+
+    button.exit {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+        outline: none;
+
+        /* font: inherit; */
         position: fixed;
-        top: 5vh;
-        right: 5vh;
+        color: white;
+        top: 20px;
+        right: 40px;
+    }
+
+    button.exit:hover {
+        cursor: pointer;
     }
 `
 
@@ -71,7 +102,8 @@ function PortfolioEntry(props){
     const {photo} = props
     return (
         <div className="embla__slide">
-            <img src={photo.src} alt={photo.alt}/>
+            <div className="header"/>
+            <div className="photo"><img src={photo.src} alt={photo.alt}/></div>
             <div className="caption"><p>{photo.desc}</p></div>
             {/* <div className = "portfolio_item">
                 <div className = "photo">
@@ -95,15 +127,21 @@ export function Carousel(props) {
     }, [emblaApi])
   
     return (
-        <CarouselContainer onClick={() => setCarouselActive(false)}>
-            <button onClick={() => setCarouselActive(false)}>X</button>
-            <div className="embla" ref={emblaRef}>
-                <div className="embla__container">
-                    {Object.keys(photos).map(key=>{
-                        return <PortfolioEntry key={key} photo={photos[key]}/>
-                    })}
+        <>
+            <CarouselContainer>
+                <div className="embla" ref={emblaRef}>
+                    <div className="embla__container">
+                        {Object.keys(photos).map(key=>{
+                            return <PortfolioEntry key={key} photo={photos[key]}/>
+                        })}
+                    </div>
+                    <button className="exit" onClick={() => setCarouselActive(false)}>
+                        <i className="fa-solid fa-xmark fa-2xl"></i>
+                    </button>
                 </div>
-            </div>
-        </CarouselContainer>
+            </CarouselContainer>
+        </>
+        // <CarouselContainer onClick={() => setCarouselActive(false)}>
+        
     )
   }

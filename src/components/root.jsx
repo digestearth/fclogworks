@@ -49,7 +49,7 @@ export function Root(props) {
         const mediaQuery = window.matchMedia("(max-width: 920px)");
     
         const handleMediaChange = (event) => {
-            setMobile(event.matches);
+            setMobile(event.matches);1
             setHamburgerActive(false);
         };
     
@@ -71,7 +71,7 @@ export function Root(props) {
                 <Container>
                     <Content>
                         <main>
-                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive}}/>}
+                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive}}/>}
                         </main>
                     </Content>
                 </Container>

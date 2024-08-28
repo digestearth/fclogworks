@@ -9,7 +9,8 @@ import fc from "../assets/logo_blackwhite.svg"
 import {SmoothLink} from "./smoothlink"
 
 const NavContainer = styled.div`
-    position: fixed;
+    position: sticky;
+    top: 0px;
     flex: 0;
     width: 100%;
     height: 75px;
