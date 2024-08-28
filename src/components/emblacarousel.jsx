@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useCallback} from 'react';
 
 import styled from '@emotion/styled';
 
@@ -102,21 +102,67 @@ const CarouselContainer = styled.div`
         }
     }
 
-    button.exit {
+    button {
         padding: 0;
         margin: 0;
         border: none;
         background: none;
         outline: none;
-
-        /* font: inherit; */
-        position: fixed;
         color: white;
+    }
+
+    button.exit {
+        position: fixed;
         top: 25px;
         right: 40px;
     }
 
     button.exit:hover {
+        cursor: pointer;
+    }
+
+    .left {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button.embla__prev {
+        color: #ffffffab;
+        i {
+            font-size: 50px;
+        }
+    }
+
+    button.embla__prev:hover {
+        color: #ffffffe2;
+        cursor: pointer;
+    }
+
+    button.embla__next {
+        color: #ffffffab;
+        i {
+            font-size: 50px;
+        }
+    }
+
+    button.embla__next:hover {
+        color: #ffffffe2;
         cursor: pointer;
     }
 `
@@ -148,6 +194,14 @@ export function Carousel(props) {
         console.log(emblaApi.slideNodes()) // Access API
         }
     }, [emblaApi])
+
+    const scrollPrev = useCallback(() => {
+        if (emblaApi) emblaApi.scrollPrev()
+    }, [emblaApi])
+    
+    const scrollNext = useCallback(() => {
+        if (emblaApi) emblaApi.scrollNext()
+    }, [emblaApi])
   
     return (
         <>
@@ -157,6 +211,13 @@ export function Carousel(props) {
                         {Object.keys(photos).map(key=>{
                             return <PortfolioEntry key={key} photo={photos[key]}/>
                         })}
+                    </div>
+                    
+                    <div className="left">
+                        <button className="embla__prev" onClick={scrollPrev}><i className="fa-solid fa-circle-arrow-left"/></button>
+                    </div>
+                    <div className="right">
+                        <button className="embla__next" onClick={scrollNext}><i className="fa-solid fa-circle-arrow-right"/></button>
                     </div>
                     <button className="exit" onClick={() => setCarouselActive(false)}>
                         <i className="fa-solid fa-xmark fa-2xl"></i>
