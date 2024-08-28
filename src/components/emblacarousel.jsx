@@ -59,12 +59,15 @@ const CarouselContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 5px;
+        margin-right: 5px;
         /* background-color: green; */
 
         img {
             max-height: 100%;
-            min-height: 500px;
+            /* min-height: 500px; */
             max-width: 100%;
+            
             
         }
     }
