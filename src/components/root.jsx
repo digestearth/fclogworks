@@ -45,6 +45,7 @@ export function Root(props) {
     const [mobile, setMobile] = useState(window.matchMedia("(max-width: 920px)").matches);
     const [hamburgerActive, setHamburgerActive] = useState(false);
 
+    //Handle media changing
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 920px)");
     
@@ -59,6 +60,15 @@ export function Root(props) {
             mediaQuery.removeEventListener('change', handleMediaChange);
         };
     }, []);
+
+    // Add or remove scrolling when carousel is active
+    useEffect(() => {
+        if (carouselActive) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [carouselActive]);
 
     
 

@@ -46,19 +46,26 @@ const CarouselContainer = styled.div`
     }
 
     .header {
-        height: 100px;
+        height: 75px;
+        /* background-image: linear-gradient(rgba(0,0,0,1)40%, rgba(0,0,0,0.0)); */
+        background-color: black;
     }
 
     .photo {
         min-height: 100%;
         max-height: 100%;
+        
         width: auto;
         display: flex;
         justify-content: center;
+        align-items: center;
         /* background-color: green; */
 
         img {
             max-height: 100%;
+            min-height: 500px;
+            max-width: 100%;
+            
         }
     }
 
@@ -66,16 +73,29 @@ const CarouselContainer = styled.div`
     .caption {
         height: 100px;
         width: 100%;
-        background-image: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.3) 99%);
+        /* background-image: linear-gradient(0deg, rgba(0,0,0,1)70%, rgba(0,0,0,0.0)); */
+        background-color: black;
         color: white;
         bottom: 0;
         display: flex;
         justify-content: center;
 
+        @media (max-width: 920px) {
+            height: 125px;
+        }
+
         p {
             width: 60%;
             margin: 10px;
-            margin-top: 15px;
+            margin-top: 25px;
+
+            @media (max-width: 1200px) {
+                width: 80%;
+            }
+
+            @media (max-width: 920px) {
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -89,7 +109,7 @@ const CarouselContainer = styled.div`
         /* font: inherit; */
         position: fixed;
         color: white;
-        top: 20px;
+        top: 25px;
         right: 40px;
     }
 

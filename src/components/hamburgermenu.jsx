@@ -43,8 +43,8 @@ const MenuBg = styled.div`
     }
 
     div {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         margin-left: 10px;
     }
 `
