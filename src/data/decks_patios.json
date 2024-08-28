@@ -1,0 +1,27 @@
+[
+    {
+        "alt": "deck_1a", 
+        "src": "/src/assets/decks_patios/deck_1a.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "deck_2a", 
+        "src": "/src/assets/decks_patios/deck_2a.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "deck_3a", 
+        "src": "/src/assets/decks_patios/deck_3a.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "deck_4a", 
+        "src": "/src/assets/decks_patios/deck_4a.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "patio_1a", 
+        "src": "/src/assets/decks_patios/patio_1a.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    }
+]

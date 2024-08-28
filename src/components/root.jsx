@@ -7,7 +7,6 @@ import { HamburgerMenu } from "./hamburgermenu";
 import styled from "@emotion/styled";
 
 import { Carousel } from "./emblacarousel";
-import kitchen_decks from "../data/bathroom_kitchen.json";
 
 const MainDiv = styled.div`
     height: 100%;
@@ -83,7 +82,7 @@ export function Root(props) {
                 <Container>
                     <Content>
                         <main>
-                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive}}/>}
+                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive, setPhotos}}/>}
                         </main>
                     </Content>
                 </Container>

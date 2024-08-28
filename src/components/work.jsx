@@ -12,8 +12,9 @@ import deck from "../assets/homepage/deck.png";
 import kitchen from "../assets/homepage/kitchen.png";
 import house from "../assets/homepage/house.png";
 
-import kitchen_decks from "../data/bathroom_kitchen.json";
-import deck_patio from "../data/deck_patio.json";
+import kitchens_bathrooms from "../data/bathrooms_kitchens.json";
+import decks_patios from "../data/decks_patios.json";
+import exterior_additions from "../data/exterior_additions.json";
 
 const WorkDiv = styled.div`
     scroll-margin-top: 80px;
@@ -222,7 +223,7 @@ export function Work(props) {
                     setCarouselActive={setCarouselActive}
                     setHamburgerActive={setHamburgerActive}
                     setPhotos={setPhotos}
-                    photoArray={kitchen_decks}
+                    photoArray={exterior_additions}
                     img = {house}
                     orientation ={mobile ? "stacked" : "left"}
                     title = "Exterior Additions"
@@ -233,7 +234,7 @@ export function Work(props) {
                     setCarouselActive={setCarouselActive}
                     setHamburgerActive={setHamburgerActive}
                     setPhotos={setPhotos}
-                    photoArray={deck_patio}
+                    photoArray={decks_patios}
                     orientation ={mobile ? "stacked" : "right"}
                     img = {deck}
                     title = "Decks and Patios"
@@ -244,7 +245,7 @@ export function Work(props) {
                     setCarouselActive={setCarouselActive}
                     setHamburgerActive={setHamburgerActive}
                     setPhotos={setPhotos}
-                    photoArray={kitchen_decks}
+                    photoArray={kitchens_bathrooms}
                     orientation ={mobile ? "stacked" : "left"}
                     img = {kitchen}
                     title = "Kitchens and Bathrooms"
