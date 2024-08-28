@@ -3,10 +3,7 @@ import { createPortal } from "react-dom";
 import { useOutletContext } from "react-router-dom";
 import styled from "@emotion/styled";
 
-import chevron_down from "../assets/icons/chevron_down.svg";
-
 import { Separator } from "./separator";
-import { SmoothLink } from "./smoothlink";
 import {SectionTitle} from "./sectiontitle";
 
 import {color_bg, color_text, color_element} from './colors.jsx'
@@ -14,6 +11,9 @@ import {color_bg, color_text, color_element} from './colors.jsx'
 import deck from "../assets/homepage/deck.png";
 import kitchen from "../assets/homepage/kitchen.png";
 import house from "../assets/homepage/house.png";
+
+import kitchen_decks from "../data/bathroom_kitchen.json";
+import deck_patio from "../data/deck_patio.json";
 
 const WorkDiv = styled.div`
     scroll-margin-top: 80px;
@@ -88,7 +88,7 @@ const DescriptionWrapper = styled.div`
 
     @keyframes buttonhover{
         from {background-color: ${color_bg}; color: ${color_text}; border: ${color_text} 2px solid;}
-        to {background-color: ${color_element}; color: ${color_bg}; border: none;}
+        to {background-color: ${color_text}; color: ${color_bg}; border: none;}
     }
 
     button {
@@ -112,7 +112,7 @@ const DescriptionWrapper = styled.div`
     button:hover {
         animation-name: buttonhover;
         animation-duration: 250ms;
-        background-color: ${color_element};
+        background-color: ${color_text};
         color: ${color_bg};
         border: none;
     }
@@ -153,14 +153,15 @@ const BannerRight = styled.div`
 `
 
 function galleryButtonClicked(props) {
-    const {setCarouselActive, setHamburgerActive} = props;
+    const {setCarouselActive, setHamburgerActive, setPhotos, photoArray} = props;
     setCarouselActive(true);
     setHamburgerActive(false);
+    setPhotos(photoArray);
     console.log("Gallery button clicked");
 }
 
 function WorkBanner(props) {
-    const {setCarouselActive, setHamburgerActive, orientation, title, description, img, alt} = props;
+    const {orientation, title, description, img, alt} = props;
     if (orientation == 'left') {
         return (
             <BannerRow>
@@ -210,7 +211,7 @@ function WorkBanner(props) {
 }
 
 export function Work(props) {
-    const {mobile, carouselActive, setCarouselActive, setHamburgerActive} = useOutletContext();
+    const {mobile, carouselActive, setCarouselActive, setHamburgerActive, setPhotos} = useOutletContext();
 
     return (
         <>
@@ -220,6 +221,8 @@ export function Work(props) {
                 <WorkBanner
                     setCarouselActive={setCarouselActive}
                     setHamburgerActive={setHamburgerActive}
+                    setPhotos={setPhotos}
+                    photoArray={kitchen_decks}
                     img = {house}
                     orientation ={mobile ? "stacked" : "left"}
                     title = "Exterior Additions"
@@ -229,6 +232,8 @@ export function Work(props) {
                 <WorkBanner
                     setCarouselActive={setCarouselActive}
                     setHamburgerActive={setHamburgerActive}
+                    setPhotos={setPhotos}
+                    photoArray={deck_patio}
                     orientation ={mobile ? "stacked" : "right"}
                     img = {deck}
                     title = "Decks and Patios"
@@ -238,6 +243,8 @@ export function Work(props) {
                 <WorkBanner
                     setCarouselActive={setCarouselActive}
                     setHamburgerActive={setHamburgerActive}
+                    setPhotos={setPhotos}
+                    photoArray={kitchen_decks}
                     orientation ={mobile ? "stacked" : "left"}
                     img = {kitchen}
                     title = "Kitchens and Bathrooms"

@@ -45,6 +45,8 @@ export function Root(props) {
     const [mobile, setMobile] = useState(window.matchMedia("(max-width: 920px)").matches);
     const [hamburgerActive, setHamburgerActive] = useState(false);
 
+    const [photos, setPhotos] = useState([]);
+
     //Handle media changing
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 920px)");
@@ -75,13 +77,13 @@ export function Root(props) {
     return (
         <>
             <NavBar mobile={mobile} hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/>
-            {carouselActive ? <Carousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={kitchen_decks}/> : null}
+            {carouselActive ? <Carousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={photos}/> : null}
             {hamburgerActive ? <HamburgerMenu hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/> : <></>}
             <MainDiv>
                 <Container>
                     <Content>
                         <main>
-                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive}}/>}
+                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive, setPhotos}}/>}
                         </main>
                     </Content>
                 </Container>

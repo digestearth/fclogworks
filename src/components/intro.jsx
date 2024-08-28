@@ -57,7 +57,6 @@ const FcLogo = styled.div`
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-        margin-left: 20px;
     }
 
     img.logo{
@@ -68,6 +67,7 @@ const FcLogo = styled.div`
         /* background-color: red; */
         @media (max-width: 650px) {
             width: 300px;
+            margin-left: 20px;
         }
     }
 `

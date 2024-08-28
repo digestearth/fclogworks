@@ -4,10 +4,6 @@ import styled from '@emotion/styled';
 
 import  useEmblaCarousel  from 'embla-carousel-react';
 
-import deck from "../assets/homepage/deck.png";
-import kitchen from "../assets/homepage/kitchen.png";
-import test from "../assets/bathroom_kitchen/bathroom_a_1.png";
-
 const CarouselContainer = styled.div`
     position:fixed;
     top: 0;
