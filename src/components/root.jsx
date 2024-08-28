@@ -17,7 +17,7 @@ const MainDiv = styled.div`
 `
 
 const Container = styled.div`
-    margin-top: 75px;
+    /* margin-top: 75px; */
     height: 100%;
     width: 1500px;
     margin-bottom: 10px;
@@ -83,7 +83,7 @@ export function Root(props) {
                 <Container>
                     <Content>
                         <main>
-                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive, setPhotos}}/>}
+                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive}}/>}
                         </main>
                     </Content>
                 </Container>

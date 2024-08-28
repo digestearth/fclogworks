@@ -18,7 +18,6 @@ const GridContainer = styled.div`
     grid-template-rows: 1fr 4fr;
 
     
-
     @media (max-width: 1100px) {
         height: 600px;
     }
