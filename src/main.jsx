@@ -7,6 +7,11 @@ import {color_bg, color_text, color_element} from './components/colors.jsx'
 
 import {Root} from './components/root.jsx'
 import {HomePage} from './pages/home.jsx'
+import {Gallery} from './pages/gallery.jsx'
+
+import home_additions from "./data/home_additions.json";
+import kitchens_bathrooms from "./data/bathrooms_kitchens.json";
+import decks_patios from "./data/decks_patios.json";
 
 const globalStyle = css`
   html, body {
@@ -32,7 +37,10 @@ const router = createBrowserRouter([
       </Root>
     ),
     children: [
-      {index: true, element: <HomePage />}
+      {index: true, element: <HomePage />},
+      {path: "home-additions", element: <Gallery photos={home_additions} />},
+      {path: "bathrooms-kitchens", element: <Gallery photos={kitchens_bathrooms} />},
+      {path: "decks-patios", element: <Gallery photos={decks_patios} />}
     ]
 }
 ])

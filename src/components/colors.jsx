@@ -5,6 +5,7 @@
 export const color_bg = "#ffffff";
 export const color_text = "#373734";
 export const color_element = "#9b7b65";
+// export const color_element = "#876f61";
 export const color_subelement = "#f9f8f6";
 export const color_element_inset = "#8e715d";
 export const color_element_accent = "#70594f";

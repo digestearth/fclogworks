@@ -1,0 +1,47 @@
+[
+    {
+        "alt": "home1a", 
+        "src": "/src/assets/home_additions/home1a.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "home2a", 
+        "src": "/src/assets/home_additions/home2a.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "home3b", 
+        "src": "/src/assets/home_additions/home2b.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "home2c", 
+        "src": "/src/assets/home_additions/home2c.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "bedroom", 
+        "src": "/src/assets/home_additions/bedroom.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "floor", 
+        "src": "/src/assets/home_additions/floor.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "log_siding", 
+        "src": "/src/assets/home_additions/log_siding.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "pillars", 
+        "src": "/src/assets/home_additions/pillars.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "window", 
+        "src": "/src/assets/home_additions/window.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    }
+]

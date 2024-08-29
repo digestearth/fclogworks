@@ -11,10 +11,12 @@ import {color_bg, color_text, color_element} from './colors.jsx'
 import deck from "../assets/homepage/deck.png";
 import kitchen from "../assets/homepage/kitchen.png";
 import house from "../assets/homepage/house.png";
+import bar from "../assets/homepage/bar.png";
 
+import home_additions from "../data/home_additions.json";
 import kitchens_bathrooms from "../data/bathrooms_kitchens.json";
 import decks_patios from "../data/decks_patios.json";
-import exterior_additions from "../data/exterior_additions.json";
+
 
 const WorkDiv = styled.div`
     scroll-margin-top: 80px;
@@ -223,10 +225,10 @@ export function Work(props) {
                     setCarouselActive={setCarouselActive}
                     setHamburgerActive={setHamburgerActive}
                     setPhotos={setPhotos}
-                    photoArray={exterior_additions}
+                    photoArray={home_additions}
                     img = {house}
                     orientation ={mobile ? "stacked" : "left"}
-                    title = "Exterior Additions"
+                    title = "Home Additions"
                     description = "A passion for building log houses from the ground up gave us a deep understanding of conventional house building techniques. We can help bring your ideas to life and make a home which is uniquely &#34;you&#34;!"  
                 />
                 <Separator/>
@@ -250,6 +252,17 @@ export function Work(props) {
                     img = {kitchen}
                     title = "Kitchens and Bathrooms"
                     description = "Bathroom or kitchen feeling old or dated? Invest in your house and build the home that fits you!"
+                />
+                <Separator/>
+                <WorkBanner
+                    setCarouselActive={setCarouselActive}
+                    setHamburgerActive={setHamburgerActive}
+                    setPhotos={setPhotos}
+                    photoArray={kitchens_bathrooms}
+                    orientation ={mobile ? "stacked" : "right"}
+                    img = {bar}
+                    title = "Custom Work"
+                    description = "We specialize in handcrafted, custom work. If you want to make something truly unique, we can help you!"
                 />
             </WorkDiv>
             
