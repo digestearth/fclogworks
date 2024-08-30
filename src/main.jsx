@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {index: true, element: <HomePage />},
-      {path: "home-additions", element: <Gallery photos={home_additions} />},
+      {path: "additions", element: <Gallery photos={home_additions} />},
       {path: "bathrooms-kitchens", element: <Gallery photos={kitchens_bathrooms} />},
       {path: "decks-patios", element: <Gallery photos={decks_patios} />}
     ]

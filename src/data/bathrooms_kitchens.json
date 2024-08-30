@@ -1,62 +1,62 @@
 [
     {
         "alt": "bathroom_1a", 
-        "src": "/src/assets/photos/bathrooms_kitchens/bathroom_1a.png",
-        "thumb": "/src/assets/thumbnails/bathrooms_kitchens/bathroom_1a.png",
+        "src": "/src/assets/photos/gallery/bathrooms_kitchens/fullsize/bathroom_1a.png",
+        "thumb": "/src/assets/photos/gallery/bathrooms_kitchens/thumbnails/bathroom_1a.png",
         "desc": ""
     },
     {
         "alt": "bathroom_1b", 
-        "src": "/src/assets/photos/bathrooms_kitchens/bathroom_1b.png",
-        "thumb": "/src/assets/thumbnails/bathrooms_kitchens/bathroom_1b.png",
+        "src": "/src/assets/photos/gallery/bathrooms_kitchens/fullsize/bathroom_1b.png",
+        "thumb": "/src/assets/photos/gallery/bathrooms_kitchens/thumbnails/bathroom_1b.png",
         "desc": ""
     },
     {
         "alt": "bathroom_2a", 
-        "src": "/src/assets/photos/bathrooms_kitchens/bathroom_2a.png",
-        "thumb": "/src/assets/thumbnails/bathrooms_kitchens/bathroom_2a.png",
+        "src": "/src/assets/photos/gallery/bathrooms_kitchens/fullsize/bathroom_2a.png",
+        "thumb": "/src/assets/photos/gallery/bathrooms_kitchens/thumbnails/bathroom_2a.png",
         "desc": ""
     },
     {
         "alt": "bathroom_3a", 
-        "src": "/src/assets/photos/bathrooms_kitchens/bathroom_3a.png",
-        "thumb": "/src/assets/thumbnails/bathrooms_kitchens/bathroom_3a.png",
+        "src": "/src/assets/photos/gallery/bathrooms_kitchens/fullsize/bathroom_3a.png",
+        "thumb": "/src/assets/photos/gallery/bathrooms_kitchens/thumbnails/bathroom_3a.png",
         "desc": ""
     },
     {
         "alt": "bathroom_3b", 
-        "src": "/src/assets/photos/bathrooms_kitchens/bathroom_3b.png",
-        "thumb": "/src/assets/thumbnails/bathrooms_kitchens/bathroom_3b.png",
+        "src": "/src/assets/photos/gallery/bathrooms_kitchens/fullsize/bathroom_3b.png",
+        "thumb": "/src/assets/photos/gallery/bathrooms_kitchens/thumbnails/bathroom_3b.png",
         "desc": ""
     },
     {
         "alt": "bathroom_3c", 
-        "src": "/src/assets/photos/bathrooms_kitchens/bathroom_3c.png",
-        "thumb": "/src/assets/thumbnails/bathrooms_kitchens/bathroom_3c.png",
+        "src": "/src/assets/photos/gallery/bathrooms_kitchens/fullsize/bathroom_3c.png",
+        "thumb": "/src/assets/photos/gallery/bathrooms_kitchens/thumbnails/bathroom_3c.png",
         "desc": ""
     },
     {
         "alt": "kitchen_1a", 
-        "src": "/src/assets/photos/bathrooms_kitchens/kitchen_1a.png",
-        "thumb": "/src/assets/thumbnails/bathrooms_kitchens/kitchen_1a.png",
+        "src": "/src/assets/photos/gallery/bathrooms_kitchens/fullsize/kitchen_1a.png",
+        "thumb": "/src/assets/photos/gallery/bathrooms_kitchens/thumbnails/kitchen_1a.png",
         "desc": ""
     },
     {
         "alt": "kitchen_2a", 
-        "src": "/src/assets/photos/bathrooms_kitchens/kitchen_2a.png",
-        "thumb": "/src/assets/thumbnails/bathrooms_kitchens/kitchen_2a.png",
+        "src": "/src/assets/photos/gallery/bathrooms_kitchens/fullsize/kitchen_2a.png",
+        "thumb": "/src/assets/photos/gallery/bathrooms_kitchens/thumbnails/kitchen_2a.png",
         "desc": ""
     },
     {
         "alt": "kitchen_2b", 
-        "src": "/src/assets/photos/bathrooms_kitchens/kitchen_2b.png",
-        "thumb": "/src/assets/thumbnails/bathrooms_kitchens/kitchen_2b.png",
+        "src": "/src/assets/photos/gallery/bathrooms_kitchens/fullsize/kitchen_2b.png",
+        "thumb": "/src/assets/photos/gallery/bathrooms_kitchens/thumbnails/kitchen_2b.png",
         "desc": ""
     },
     {
         "alt": "kitchen_2c", 
-        "src": "/src/assets/photos/bathrooms_kitchens/kitchen_2c.png",
-        "thumb": "/src/assets/thumbnails/bathrooms_kitchens/kitchen_2c.png",
+        "src": "/src/assets/photos/gallery/bathrooms_kitchens/fullsize/kitchen_2c.png",
+        "thumb": "/src/assets/photos/gallery/bathrooms_kitchens/thumbnails/kitchen_2c.png",
         "desc": ""
     }
 ]

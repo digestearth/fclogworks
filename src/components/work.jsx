@@ -8,10 +8,10 @@ import {SectionTitle} from "./sectiontitle";
 
 import {color_bg, color_text, color_element} from './colors.jsx'
 
-import deck from "../assets/homepage/deck.png";
-import kitchen from "../assets/homepage/kitchen.png";
-import house from "../assets/homepage/house.png";
-import bar from "../assets/homepage/bar.png";
+import deck from "../assets/photos/homepage/deck.png";
+import kitchen from "../assets/photos/homepage/kitchen.png";
+import house from "../assets/photos/homepage/house.png";
+import bar from "../assets/photos/homepage/bar.png";
 
 import home_additions from "../data/home_additions.json";
 import kitchens_bathrooms from "../data/bathrooms_kitchens.json";

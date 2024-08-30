@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 
 import {color_bg, color_text, color_element} from './colors.jsx'
 
-import bg from "../assets/homepage/intro.png";
+import bg from "../assets/photos/homepage/intro.png";
 import logo from "../assets/logo_blackwhite.svg";
 
 const GridContainer = styled.div`
