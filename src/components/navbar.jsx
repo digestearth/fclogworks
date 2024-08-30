@@ -19,6 +19,8 @@ const NavContainer = styled.div`
     align-items: center;
     justify-content: center;
 
+    z-index: 1;
+
     div.navitems {
         flex: 0;
         height: 100%;

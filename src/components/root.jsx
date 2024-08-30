@@ -65,9 +65,11 @@ export function Root(props) {
     // Add or remove scrolling when carousel is active
     useEffect(() => {
         if (carouselActive) {
-            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+            document.body.style.overflowY = 'scroll';
         } else {
-            document.body.style.overflow = 'auto';
+            document.documentElement.style.overflow = 'auto';
+            document.body.style.overflowY = 'auto';
         }
     }, [carouselActive]);
 
@@ -76,7 +78,6 @@ export function Root(props) {
     return (
         <>
             <NavBar mobile={mobile} hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/>
-            {carouselActive ? <Carousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={photos}/> : null}
             {hamburgerActive ? <HamburgerMenu hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/> : <></>}
             <MainDiv>
                 <Container>
@@ -88,6 +89,7 @@ export function Root(props) {
                 </Container>
             </MainDiv>
             <FootBar />
+            {carouselActive ? <Carousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={photos}/> : null}
         </>
     )
 }

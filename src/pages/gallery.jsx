@@ -19,7 +19,14 @@ const GalleryContainer = styled.div`
     flex-wrap: wrap;
 `
 
-const GalleryCard = styled.div`
+const GalleryCard = styled.button`
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+
     width: 300px;
     height: 300px;
     background-color: #7a8ff7;
@@ -31,10 +38,15 @@ const GalleryCard = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover img {
+        transform: scale(1.1);
     }
 `
 
-function GalleryPhoto(props) {
+function GalleryButton(props) {
     const {photo, setCarouselActive, index} = props
     return (
         <GalleryCard onClick={() => galleryButtonClicked(index, setCarouselActive)}>
@@ -52,7 +64,7 @@ export function Gallery(props) {
         Description
         <GalleryContainer>
             {Object.keys(photos).map((key, index)=>{
-                return <GalleryPhoto key={key} index={index} photo={photos[key]} setCarouselActive={setCarouselActive}/>
+                return <GalleryButton key={key} index={index} photo={photos[key]} setCarouselActive={setCarouselActive}/>
             })}
         </GalleryContainer>
         </>
