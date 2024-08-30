@@ -16,6 +16,8 @@ const CarouselContainer = styled.div`
     
     background-color: #000000d6;
 
+    z-index: 2;
+
     .embla {
         overflow: hidden;
        height: 100%;
@@ -43,12 +45,13 @@ const CarouselContainer = styled.div`
 
     .header {
         height: 75px;
+        width: 100%;
         /* background-image: linear-gradient(rgba(0,0,0,1)40%, rgba(0,0,0,0.0)); */
         background-color: black;
     }
 
     .photo {
-        min-height: 100%;
+        min-height: 10px;
         max-height: 100%;
         
         width: auto;
@@ -71,7 +74,7 @@ const CarouselContainer = styled.div`
 
     .caption {
         height: 100px;
-        width: 100%;
+        width: 100vw;
         /* background-image: linear-gradient(0deg, rgba(0,0,0,1)70%, rgba(0,0,0,0.0)); */
         background-color: black;
         color: white;
@@ -120,6 +123,7 @@ const CarouselContainer = styled.div`
     .left {
         position: fixed;
         top: 0;
+        left: 0;
         height: 100%;
         width: 100px;
         display: flex;
@@ -182,14 +186,14 @@ function PortfolioEntry(props){
 }
 
 export function Carousel(props) {
-    const {carouselActive, setCarouselActive, photos} = props
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+    const {setCarouselActive, photos, photoIndex} = props
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: photoIndex })
 
     useEffect(() => {
         if (emblaApi) {
-        console.log(emblaApi.slideNodes()) // Access API
+            console.log(emblaApi.slideNodes()) // Access API
         }
-    }, [emblaApi])
+    }, [emblaApi, photoIndex])
 
     const scrollPrev = useCallback(() => {
         if (emblaApi) emblaApi.scrollPrev()

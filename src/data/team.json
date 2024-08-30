@@ -4,27 +4,27 @@
         "role": "Insert Role",
         "bio": "This is a biography about the owner of the company, Tim Harris. It's a temporary biography, but it's here.",
         "alt":"Tim Harris",
-        "src":"/src/assets/team/temp.png"
+        "src":"/src/assets/photos/team/temp.png"
     },
     {
         "name": "Jasper Harris",
         "role": "Insert Role",
         "bio": "A life time of building. Growing up, his father ran a small general contracting business providing real world problem solving experiences from a young age.",
         "alt": "Jasper Harris",
-        "src": "/src/assets/team/jasper.png"
+        "src": "/src/assets/photos/team/jasper.png"
     },
     {
         "name": "John Construction",
         "role": "Insert Role",
         "bio": "John Construction, after having been in construction, has been in construction for as long as he has been in construction.",
         "alt": "John Construction",
-        "src": "/src/assets/team/temp.png"
+        "src": "/src/assets/photos/team/temp.png"
     },
     {
         "name": "Jerry Builder",
         "role": "Insert Role",
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "alt": "Jerry Builder",
-        "src": "/src/assets/team/temp.png"
+        "src": "/src/assets/photos/team/temp.png"
     }
 ]

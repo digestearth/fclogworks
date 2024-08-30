@@ -91,19 +91,26 @@ const DescriptionWrapper = styled.div`
 
     @keyframes buttonhover{
         from {background-color: ${color_bg}; color: ${color_text}; border: ${color_text} 2px solid;}
-        to {background-color: ${color_text}; color: ${color_bg}; border: none;}
+        to {background-color: ${color_text}; color: ${color_bg};}
     }
 
-    button {
-        background: none;
+    a {
+        text-decoration: none;
         color: inherit;
+        background: none;
         border: none;
         padding: 0;
+        margin: 0;
         font: inherit;
         cursor: pointer;
-        outline: inherit;
+
+
         width: 200px;
         height: 75px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
         border: ${color_text} 2px solid;
 
@@ -112,12 +119,11 @@ const DescriptionWrapper = styled.div`
         }
     }
 
-    button:hover {
+    a:hover {
         animation-name: buttonhover;
         animation-duration: 250ms;
         background-color: ${color_text};
         color: ${color_bg};
-        border: none;
     }
 `
 
@@ -156,15 +162,14 @@ const BannerRight = styled.div`
 `
 
 function galleryButtonClicked(props) {
-    const {setCarouselActive, setHamburgerActive, setPhotos, photoArray} = props;
-    setCarouselActive(true);
+    const {setHamburgerActive} = props;
     setHamburgerActive(false);
-    setPhotos(photoArray);
+    window.history.pushState(null, '', `#work`)
     console.log("Gallery button clicked");
 }
 
 function WorkBanner(props) {
-    const {orientation, title, description, img, alt} = props;
+    const {orientation, title, description, img, alt, href} = props;
     if (orientation == 'left') {
         return (
             <BannerRow>
@@ -172,7 +177,7 @@ function WorkBanner(props) {
                     <DescriptionWrapper left={true}>
                         <h3>{title}</h3>
                         <p>{description}</p>
-                        <button onClick={() => galleryButtonClicked(props)}>Gallery</button>
+                        <a onClick={()=>galleryButtonClicked(props)} href={href}>Gallery</a>
                     </DescriptionWrapper> 
                 </BannerLeft>
                 <BannerRight>
@@ -190,7 +195,7 @@ function WorkBanner(props) {
                     <DescriptionWrapper left={false}>
                         <h3>{title}</h3>
                         <p>{description}</p>
-                        <button onClick={() => galleryButtonClicked(props)}>Gallery</button>
+                        <a onClick={()=>galleryButtonClicked(props)} href={href}>Gallery</a>
                     </DescriptionWrapper>    
                 </BannerRight>
             </BannerRow>
@@ -205,7 +210,7 @@ function WorkBanner(props) {
                     <DescriptionWrapper left={true}>
                         <h3>{title}</h3>
                         <p>{description}</p>
-                        <button onClick={() => galleryButtonClicked(props)}>Gallery</button>
+                        <a onClick={()=>galleryButtonClicked(props)} href={href}>Gallery</a>
                     </DescriptionWrapper>        
                 </Row>
             </>         
@@ -214,7 +219,7 @@ function WorkBanner(props) {
 }
 
 export function Work(props) {
-    const {mobile, carouselActive, setCarouselActive, setHamburgerActive, setPhotos} = useOutletContext();
+    const {mobile, setHamburgerActive} = useOutletContext();
 
     return (
         <>
@@ -222,10 +227,8 @@ export function Work(props) {
                 <Separator/>
                 <SectionTitle to="work" href="#work" content="Our Work" color={color_text}/>
                 <WorkBanner
-                    setCarouselActive={setCarouselActive}
+                    href="/gallery/additions"
                     setHamburgerActive={setHamburgerActive}
-                    setPhotos={setPhotos}
-                    photoArray={home_additions}
                     img = {house}
                     orientation ={mobile ? "stacked" : "left"}
                     title = "Home Additions"
@@ -233,10 +236,8 @@ export function Work(props) {
                 />
                 <Separator/>
                 <WorkBanner
-                    setCarouselActive={setCarouselActive}
+                    href="/gallery/decks-patios"
                     setHamburgerActive={setHamburgerActive}
-                    setPhotos={setPhotos}
-                    photoArray={decks_patios}
                     orientation ={mobile ? "stacked" : "right"}
                     img = {deck}
                     title = "Decks and Patios"
@@ -244,10 +245,8 @@ export function Work(props) {
                 />
                 <Separator/>
                 <WorkBanner
-                    setCarouselActive={setCarouselActive}
+                    href="/gallery/kitchens-bathrooms"
                     setHamburgerActive={setHamburgerActive}
-                    setPhotos={setPhotos}
-                    photoArray={kitchens_bathrooms}
                     orientation ={mobile ? "stacked" : "left"}
                     img = {kitchen}
                     title = "Kitchens and Bathrooms"
@@ -255,10 +254,8 @@ export function Work(props) {
                 />
                 <Separator/>
                 <WorkBanner
-                    setCarouselActive={setCarouselActive}
+                    href="/gallery/custom-work"
                     setHamburgerActive={setHamburgerActive}
-                    setPhotos={setPhotos}
-                    photoArray={kitchens_bathrooms}
                     orientation ={mobile ? "stacked" : "right"}
                     img = {bar}
                     title = "Custom Work"

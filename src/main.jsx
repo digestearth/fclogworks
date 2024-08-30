@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {RouterProvider, createBrowserRouter} from 'react-router-dom'
+import {RouterProvider, createBrowserRouter, Navigate} from 'react-router-dom'
 import {Global, css} from '@emotion/react'
 
 import {color_bg, color_text, color_element} from './components/colors.jsx'
@@ -38,9 +38,20 @@ const router = createBrowserRouter([
     ),
     children: [
       {index: true, element: <HomePage />},
-      {path: "additions", element: <Gallery photos={home_additions} />},
-      {path: "bathrooms-kitchens", element: <Gallery photos={kitchens_bathrooms} />},
-      {path: "decks-patios", element: <Gallery photos={decks_patios} />}
+      // Pages
+      {path: "gallery/additions", element: <Gallery title="Home Additions" photos={home_additions} />},
+      {path: "gallery/kitchens-bathrooms", element: <Gallery title="Kitchens and Bathrooms" photos={kitchens_bathrooms} />},
+      {path: "gallery/decks-patios", element: <Gallery title="Decks and Patios" photos={decks_patios} />},
+      // Redirects
+      {path: "home", element: <Navigate to="/#home" />},
+      {path: "work", element: <Navigate to="/#work" />},
+      {path: "team", element: <Navigate to="/#team" />},
+      {path: "contact", element: <Navigate to="/#contact" />},
+      {path: "gallery", element: <Navigate to="/#work" />},
+      {path: "gallery/kitchens", element: <Navigate to="/gallery/kitchens-bathrooms" />},
+      {path: "gallery/bathrooms", element: <Navigate to="/gallery/kitchens-bathrooms" />},
+      {path: "gallery/decks", element: <Navigate to="/gallery/decks-patios" />},
+      {path: "gallery/patios", element: <Navigate to="/gallery/decks-patios" />},
     ]
 }
 ])

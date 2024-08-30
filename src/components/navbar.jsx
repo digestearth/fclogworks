@@ -79,6 +79,7 @@ const NavContainer = styled.div`
         font-size: 20px;
         margin-right: 20px;
         width: min-content;
+        cursor: pointer;
     }
 
     @keyframes linkhover {

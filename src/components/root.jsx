@@ -6,8 +6,6 @@ import { FootBar } from "./footbar";
 import { HamburgerMenu } from "./hamburgermenu";
 import styled from "@emotion/styled";
 
-import { Carousel } from "./emblacarousel";
-
 const MainDiv = styled.div`
     height: 100%;
     display: flex;
@@ -83,13 +81,12 @@ export function Root(props) {
                 <Container>
                     <Content>
                         <main>
-                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive, setPhotos}}/>}
+                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive}}/>}
                         </main>
                     </Content>
                 </Container>
             </MainDiv>
             <FootBar />
-            {carouselActive ? <Carousel carouselActive={carouselActive} setCarouselActive={setCarouselActive} photos={photos}/> : null}
         </>
     )
 }
