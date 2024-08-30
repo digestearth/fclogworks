@@ -11,6 +11,7 @@ const TitleDiv = styled.div`
         padding: 0;
         margin: 0;
         font: inherit;
+        cursor: pointer;
     }
 
     a:hover {

@@ -7,9 +7,9 @@ export function SmoothLink(props) {
 
     if (window.location.pathname !== '/') {
         return (
-            <NavLink to={`/#${to}`}>
+            <a href={`/#${to}`}>
                 {children}
-            </NavLink>
+            </a>
         )
     } else {
         return (
