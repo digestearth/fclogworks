@@ -149,7 +149,7 @@ export function NavBar(props) {
                             :
                             <>
                                 <SmoothLink to="home" href="#home">Home</SmoothLink> 
-                                <SmoothLink to="work" href="#work">Work</SmoothLink> 
+                                <SmoothLink to="projects" href="#projects">Projects</SmoothLink> 
                                 <SmoothLink to="team" href="#team">Team</SmoothLink> 
                                 <SmoothLink to="contact" href="#contact">Contact</SmoothLink>
                             </>      

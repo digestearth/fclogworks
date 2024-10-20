@@ -225,7 +225,7 @@ export function Work(props) {
         <>
             <WorkDiv>
                 <Separator/>
-                <SectionTitle to="work" href="#work" content="Our Work" color={color_text}/>
+                <SectionTitle to="projects" href="#projects" content="Our Projects" color={color_text}/>
                 <WorkBanner
                     href="/gallery/additions"
                     setHamburgerActive={setHamburgerActive}
