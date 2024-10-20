@@ -55,7 +55,7 @@ const TeamPortrait = styled.div`
         display: flex;
         flex-direction: column;
         align-items: start;
-        margin-left: 10px;
+        margin-left: 5px;
         margin-right: 10px;
         
         @media (max-width: 680px) {
@@ -65,7 +65,7 @@ const TeamPortrait = styled.div`
 
     h2 {
         all: unset;
-        font-size: 16pt;
+        font-size: 14pt;
     }
 
     h3 {
