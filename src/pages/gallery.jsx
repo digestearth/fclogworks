@@ -22,8 +22,7 @@ const GalleryContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     /* background-color: ${color_subelement}; */
     flex-wrap: wrap;

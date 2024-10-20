@@ -24,10 +24,22 @@ const TitleDiv = styled.div`
 
     scroll-margin-top: 80px;
 
+    @media (max-width: 500px) {
+        font-size: 26pt;
+    }
+
+
     h1 {
+        
         all: unset;
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
+
+        @media (max-width: 500px) {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
         color: ${props => props.color};
     }
 
