@@ -27,6 +27,10 @@ const ContactContent = styled.div`
         all: unset;
         font-size: 16pt;
         margin-bottom: 20px;
+
+        @media (max-width: 425px) {
+            font-size: 14pt;
+        }
     }
 
     h2 {
@@ -35,6 +39,13 @@ const ContactContent = styled.div`
         margin-bottom: 10px;
         margin-left: 10px;
         margin-right: 10px;
+
+        @media (max-width: 425px) {
+            font-size: 16pt;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
     }
 
     a {
@@ -67,6 +78,10 @@ const ContactCard = styled.div`
     width: min-content;
     height: 150px;
     border-radius: 10px;
+
+    @media (max-width: 425px) {
+        height: 110px;
+    }
 `
 
 export function Contact() {
@@ -79,7 +94,7 @@ export function Contact() {
                 <Separator/>
                 <ContactContent>
                     <p>
-                        Do you have a dream project in mind? We'd love to hear about it!
+                        Do you have a dream project in mind? We'd love to hear about it!<br/><br/>
                         Please reach out to us with any questions or inquiries. If you're thinking of something specific,
                         feel free to include details and photos in your email.
                     </p>
