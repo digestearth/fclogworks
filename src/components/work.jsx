@@ -164,7 +164,7 @@ const BannerRight = styled.div`
 function galleryButtonClicked(props) {
     const {setHamburgerActive} = props;
     setHamburgerActive(false);
-    window.history.pushState(null, '', `#work`)
+    window.history.pushState(null, '', `#projects`)
     console.log("Gallery button clicked");
 }
 

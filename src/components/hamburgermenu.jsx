@@ -55,7 +55,7 @@ export function HamburgerMenu(props) {
         <MenuBg>
             <SmoothLink to="home" href="#home" setHamburgerActive={setHamburgerActive}><div>Home</div></SmoothLink> 
             <hr/>
-            <SmoothLink to="work" href="#work" setHamburgerActive={setHamburgerActive}><div>Work</div></SmoothLink> 
+            <SmoothLink to="projects" href="#projects" setHamburgerActive={setHamburgerActive}><div>Projects</div></SmoothLink> 
             <hr/>
             <SmoothLink to="team" href="#team" setHamburgerActive={setHamburgerActive}><div>Team</div></SmoothLink> 
             <hr/>

@@ -44,10 +44,10 @@ const router = createBrowserRouter([
       {path: "gallery/decks-patios", element: <Gallery title="Decks and Patios" photos={decks_patios} />},
       // Redirects
       {path: "home", element: <Navigate to="/#home" />},
-      {path: "work", element: <Navigate to="/#work" />},
+      {path: "projects", element: <Navigate to="/#projects" />},
       {path: "team", element: <Navigate to="/#team" />},
       {path: "contact", element: <Navigate to="/#contact" />},
-      {path: "gallery", element: <Navigate to="/#work" />},
+      {path: "gallery", element: <Navigate to="/#projects" />},
       {path: "gallery/kitchens", element: <Navigate to="/gallery/kitchens-bathrooms" />},
       {path: "gallery/bathrooms", element: <Navigate to="/gallery/kitchens-bathrooms" />},
       {path: "gallery/decks", element: <Navigate to="/gallery/decks-patios" />},
