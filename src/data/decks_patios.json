@@ -1,32 +1,32 @@
 [
     {
         "alt": "deck_1a", 
-        "src": "/src/assets/photos/gallery/decks_patios/fullsize/deck_1a.png",
-        "thumb": "/src/assets/photos/gallery/decks_patios/thumbnails/deck_1a.png",
+        "src": "/photos/decks_patios/fullsize/deck_1a.png",
+        "thumb": "/photos/decks_patios/thumbnails/deck_1a.png",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
     },
     {
         "alt": "deck_2a", 
-        "src": "/src/assets/photos/gallery/decks_patios/fullsize/deck_2a.png",
-        "thumb": "/src/assets/photos/gallery/decks_patios/thumbnails/deck_2a.png",
+        "src": "/photos/decks_patios/fullsize/deck_2a.png",
+        "thumb": "/photos/decks_patios/thumbnails/deck_2a.png",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
     },
     {
         "alt": "deck_3a", 
-        "src": "/src/assets/photos/gallery/decks_patios/fullsize/deck_3a.png",
-        "thumb": "/src/assets/photos/gallery/decks_patios/thumbnails/deck_3a.png",
+        "src": "/photos/decks_patios/fullsize/deck_3a.png",
+        "thumb": "/photos/decks_patios/thumbnails/deck_3a.png",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
     },
     {
         "alt": "deck_4a", 
-        "src": "/src/assets/photos/gallery/decks_patios/fullsize/deck_4a.png",
-        "thumb": "/src/assets/photos/gallery/decks_patios/thumbnails/deck_4a.png",
+        "src": "/photos/decks_patios/fullsize/deck_4a.png",
+        "thumb": "/photos/decks_patios/thumbnails/deck_4a.png",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
     },
     {
         "alt": "patio_1a", 
-        "src": "/src/assets/photos/gallery/decks_patios/fullsize/patio_1a.png",
-        "thumb": "/src/assets/photos/gallery/decks_patios/thumbnails/patio_1a.png",
+        "src": "/photos/decks_patios/fullsize/patio_1a.png",
+        "thumb": "/photos/decks_patios/thumbnails/patio_1a.png",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
     }
 ]
