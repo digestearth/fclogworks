@@ -92,7 +92,6 @@ function Portrait(props) {
                 <h2>{name}</h2>
                 <h3>{role}</h3>
             </div> 
-            <p>{bio}</p>
         </TeamPortrait>
     )
 }
