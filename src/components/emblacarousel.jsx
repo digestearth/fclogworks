@@ -87,6 +87,7 @@ const CarouselContainer = styled.div`
         }
 
         p {
+            font-size: 1rem;
             width: 60%;
             margin: 10px;
             margin-top: 25px;
@@ -96,7 +97,9 @@ const CarouselContainer = styled.div`
             }
 
             @media (max-width: 920px) {
+                width: 95%;
                 margin-bottom: 10px;
+                font-size: 0.9rem;
             }
         }
     }
