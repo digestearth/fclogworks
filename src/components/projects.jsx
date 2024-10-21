@@ -3,8 +3,8 @@ import { createPortal } from "react-dom";
 import { useOutletContext } from "react-router-dom";
 import styled from "@emotion/styled";
 
-import { Separator } from "./separator";
-import {SectionTitle} from "./sectiontitle";
+import { Separator } from "./separator.jsx";
+import {SectionTitle} from "./sectiontitle.jsx";
 
 import {color_bg, color_text, color_element} from './colors.jsx'
 
@@ -218,7 +218,7 @@ function WorkBanner(props) {
     }
 }
 
-export function Work(props) {
+export function Projects(props) {
     const {mobile, setHamburgerActive} = useOutletContext();
 
     return (

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import {Intro} from "../components/intro";
-import {Work} from "../components/work";
+import {Projects} from "../components/projects";
 import {Team} from "../components/team";
 import {Contact} from "../components/contact";
 
@@ -15,7 +15,7 @@ export function HomePage() {
   return (
     <>
       <Intro />
-      <Work />
+      <Projects />
       <Team/>
       <Contact/>
     </>
