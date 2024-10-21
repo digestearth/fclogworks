@@ -12,6 +12,7 @@ import {Gallery} from './pages/gallery.jsx'
 import home_additions from "./data/home_additions.json";
 import kitchens_bathrooms from "./data/bathrooms_kitchens.json";
 import decks_patios from "./data/decks_patios.json";
+import custom from "./data/custom.json";
 
 const globalStyle = css`
   html, body {
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
       {path: "gallery/additions", element: <Gallery title="Home Additions" photos={home_additions} />},
       {path: "gallery/kitchens-bathrooms", element: <Gallery title="Kitchens and Bathrooms" photos={kitchens_bathrooms} />},
       {path: "gallery/decks-patios", element: <Gallery title="Decks and Patios" photos={decks_patios} />},
+      {path: "gallery/custom", element: <Gallery title="Custom Work" photos={custom} />},
       // Redirects
       {path: "home", element: <Navigate to="/#home" />},
       {path: "projects", element: <Navigate to="/#projects" />},
@@ -50,8 +52,13 @@ const router = createBrowserRouter([
       {path: "gallery", element: <Navigate to="/#projects" />},
       {path: "gallery/kitchens", element: <Navigate to="/gallery/kitchens-bathrooms" />},
       {path: "gallery/bathrooms", element: <Navigate to="/gallery/kitchens-bathrooms" />},
+      {path: "gallery/kitchens_bathrooms", element: <Navigate to="/gallery/kitchens-bathrooms" />},
+      {path: "gallery/bathrooms-kitchens", element: <Navigate to="/gallery/kitchens-bathrooms" />},
+      {path: "gallery/bathrooms_kitchens", element: <Navigate to="/gallery/kitchens-bathrooms" />},
       {path: "gallery/decks", element: <Navigate to="/gallery/decks-patios" />},
       {path: "gallery/patios", element: <Navigate to="/gallery/decks-patios" />},
+      {path: "gallery/decks_patios", element: <Navigate to="/gallery/decks-patios" />},
+      {path: "gallery/custom-work", element: <Navigate to="/gallery/custom" />},
     ]
 }
 ])

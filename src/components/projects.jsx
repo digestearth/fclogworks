@@ -254,7 +254,7 @@ export function Projects(props) {
                 />
                 <Separator/>
                 <WorkBanner
-                    href="/gallery/custom-work"
+                    href="/gallery/custom"
                     setHamburgerActive={setHamburgerActive}
                     orientation ={mobile ? "stacked" : "right"}
                     img = {bar}
