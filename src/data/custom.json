@@ -1,0 +1,14 @@
+[
+    {
+        "alt": "bar1a", 
+        "src": "/photos/custom/fullsize/bar1a.png",
+        "thumb": "/photos/custom/thumbnails/bar1a_thumb.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    },
+    {
+        "alt": "bar1b", 
+        "src": "/photos/custom/fullsize/bar1b.png",
+        "thumb": "/photos/custom/thumbnails/bar1b_thumb.png",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nunc augue, at rhoncus massa pharetra a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia bibendum egestas."
+    }
+]
