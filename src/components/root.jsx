@@ -27,11 +27,11 @@ const Container = styled.div`
 const Content = styled.div`
     height: 100%;
     width: 100%;
-    margin-right: 10px;
 
     main {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 `
 
@@ -78,13 +78,11 @@ export function Root(props) {
             <NavBar mobile={mobile} hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/>
             {hamburgerActive ? <HamburgerMenu hamburgerActive={hamburgerActive} setHamburgerActive={setHamburgerActive}/> : <></>}
             <MainDiv>
-                <Container>
-                    <Content>
-                        <main>
-                            {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive}}/>}
-                        </main>
-                    </Content>
-                </Container>
+                <Content>
+                    <main>
+                        {children || <Outlet context={{mobile, carouselActive, setCarouselActive, setHamburgerActive}}/>}
+                    </main>
+                </Content>
             </MainDiv>
             <FootBar />
         </>

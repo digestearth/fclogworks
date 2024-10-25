@@ -34,8 +34,8 @@ const GridContainer = styled.div`
         width: 100%;
         object-fit: cover;
         grid-area: 1 / 1 / 3 / 3;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
 `
 
@@ -46,8 +46,8 @@ const FcLogo = styled.div`
 
     width: 450px;
     margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 10vw;
+    margin-right: 150px;
 
 
     /* background-color: orange; */
@@ -72,8 +72,8 @@ const FcLogo = styled.div`
 `
 
 const IntroBlurb = styled.div`
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 12vw;
+    margin-right: 150px;
     color: white;
     /* background-color: purple; */
     grid-area: botleft;
