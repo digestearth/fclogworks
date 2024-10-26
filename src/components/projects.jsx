@@ -36,7 +36,7 @@ const Row = styled.div`
 
     h2 {
         all:unset;
-        font-size: 32pt
+        font-size: 32pt;
     }
 `
 
@@ -77,7 +77,7 @@ const DescriptionWrapper = styled.div`
         font-size: 32pt;
 
         @media (max-width: 1100px) {
-            font-size: 28pt;
+            font-size: 22pt;
         }
     }
 
