@@ -7,17 +7,19 @@ import {color_bg, color_text, color_element} from './colors.jsx'
 
 const ContactDiv = styled.div`
     height: min-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: green; */
+    background-color: ${color_element};
+    color: ${color_bg};
 `
 
 const ContactContent = styled.div`
     display: flex;
     flex-direction: column;
     /* background-color: purple; */
-    width: 60%;
+    width: 40%;
 
     @media (max-width: 900px) {
         width: 80%;
@@ -90,7 +92,8 @@ export function Contact() {
             <Separator/>
             <Separator/>
             <ContactDiv>
-                <SectionTitle to="contact" href="#contact" content="Contact Us" color={color_text}/>
+                <Separator/>
+                <SectionTitle to="contact" href="#contact" content="Contact Us" color={color_bg}/>
                 <Separator/>
                 <ContactContent>
                     <p>
@@ -108,8 +111,6 @@ export function Contact() {
                     </CardTray>
                 </ContactContent>        
             </ContactDiv>
-            <Separator/>
-            <Separator/>
         </>   
     )
 }

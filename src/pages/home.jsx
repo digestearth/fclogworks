@@ -8,7 +8,6 @@ import {Contact} from "../components/contact";
 const Container = styled.div`
     /* margin-top: 75px; */
     height: 100%;
-    margin-bottom: 10px;
     width: 1500px;
     @media (max-width: 1500px) {
         width: 100%
@@ -30,8 +29,8 @@ export function HomePage() {
       <Container>
         <Projects />
         <Team/>
-        <Contact/>
       </Container>
+      <Contact/>
     </>
   )
 }
