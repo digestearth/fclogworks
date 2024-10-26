@@ -36,6 +36,10 @@ const GridContainer = styled.div`
         grid-area: 1 / 1 / 3 / 3;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
+
+        @media (max-width: 650px) {
+            object-position: top -40px right -400px;
+        }
     }
 `
 
@@ -47,7 +51,7 @@ const FcLogo = styled.div`
     width: 450px;
     margin-top: 50px;
     margin-left: 10vw;
-    margin-right: 150px;
+    margin-right: 1px;
 
 
     /* background-color: orange; */
