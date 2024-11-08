@@ -7,24 +7,20 @@
         "src":"/photos/team/temp.png"
     },
     {
+        "name": "Dustin Harris",
+        "role": "Project Manager",
+        "bio": "Dustin Harris, after having been in construction, has been in construction for as long as he has been in construction.",
+        "alt": "Dustin Harris",
+        "src": "/photos/team/temp.png"
+    },
+    {
         "name": "Jasper Harris",
-        "role": "Insert Role",
+        "role": "Project Manager",
         "bio": "A life time of building. Growing up, his father ran a small general contracting business providing real world problem solving experiences from a young age.",
         "alt": "Jasper Harris",
         "src": "/photos/team/jasper.png"
-    },
-    {
-        "name": "John Construction",
-        "role": "Insert Role",
-        "bio": "John Construction, after having been in construction, has been in construction for as long as he has been in construction.",
-        "alt": "John Construction",
-        "src": "/photos/team/temp.png"
-    },
-    {
-        "name": "Jerry Builder",
-        "role": "Insert Role",
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "alt": "Jerry Builder",
-        "src": "/photos/team/temp.png"
     }
+    
+    
+        
 ]
