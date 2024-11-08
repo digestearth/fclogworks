@@ -1,17 +1,17 @@
 [
     {
         "name": "Tim Harris",
-        "role": "Insert Role",
+        "role": "Owner",
         "bio": "This is a biography about the owner of the company, Tim Harris. It's a temporary biography, but it's here.",
         "alt":"Tim Harris",
-        "src":"/photos/team/temp.png"
+        "src":"/photos/team/timharrisprofile.png"
     },
     {
         "name": "Dustin Harris",
         "role": "Project Manager",
         "bio": "Dustin Harris, after having been in construction, has been in construction for as long as he has been in construction.",
         "alt": "Dustin Harris",
-        "src": "/photos/team/temp.png"
+        "src": "/photos/team/dustin_profile_temp.png"
     },
     {
         "name": "Jasper Harris",
